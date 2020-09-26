@@ -4,7 +4,7 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set autoindent
-set smartindent
+***REMOVED***letype plugin indent on
 set expandtab
 set nowrap
 set smartcase
@@ -43,15 +43,13 @@ Plug 'prettier/vim-prettier', {
 
 call plug***REMOVED***end(***REMOVED***
 
-let g:gruvbox_contrast_dark = 'hard'
+autocmd vimenter * colorscheme gruvbox
+set background=dark    " Setting dark mode
 if exists('+termguicolors'***REMOVED***
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
-
-colorscheme gruvbox
-set background=dark
 
 """"""""""""""""COC Con***REMOVED***g""""""""""""""" 
 set hidden
