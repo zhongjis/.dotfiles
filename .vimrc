@@ -1,11 +1,15 @@
 syntax on
 
+set guicursor=
+set relativenumber
+set nohlsearch
+set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set autoindent
-***REMOVED***letype plugin indent on
 set expandtab
+set smartindent
+set nu
 set nowrap
 set smartcase
 set noswap***REMOVED***le
@@ -13,14 +17,15 @@ set nobackup
 set undodir=~/.vim/undodir
 set undo***REMOVED***le
 set incsearch
-set relativenumber
-set rnu
 set termguicolors
 set scrolloff=8
 set noshowmode
-set encoding=UTF-8
-set colorcolumn=80
 set completeopt=menuone,noinsert,noselect
+" for nerdtree
+set encoding=UTF-8
+" ruler
+set colorcolumn=80
+
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug***REMOVED***begin('~/.vim/plugged'***REMOVED***
@@ -28,12 +33,14 @@ call plug***REMOVED***begin('~/.vim/plugged'***REMOVED***
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf***REMOVED***install(***REMOVED*** } }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim'
 Plug 'morhetz/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree' 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
@@ -106,10 +113,17 @@ endif
 
 let mapleader = " "
 
+let g:java_highlight_all = 1
+
 " remappinp
-nnoremap <Leader>pf :Files<CR>
+nnoremap <c-p> :Files<CR>
 nnoremap <F1> :NERDTreeFind<CR>
 nnoremap <F2> :UndotreeToggle<CR>
+
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
+nmap <leader>gc :GCheckout<CR>
 
 " fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
