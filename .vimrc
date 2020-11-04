@@ -1,4 +1,5 @@
 syntax on
+***REMOVED***letype plugin indent on
 
 set guicursor=
 set relativenumber
@@ -21,16 +22,36 @@ set termguicolors
 set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
-" for nerdtree
-set encoding=UTF-8
-" ruler
-set colorcolumn=80
+set signcolumn=yes
+set foldmethod=syntax
 
+" for vim's weird back space does not work issue
+set backspace=indent,eol,start
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s***REMOVED*** leads to noticeable
+" delays and poor user experience.
+set updatetime=50
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug***REMOVED***begin('~/.vim/plugged'***REMOVED***
 
+" telescope requirements...
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/telescope.nvim'
+
+" Coc + coc-highlight + coc-yank
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" other
 Plug 'junegunn/fzf', { 'do': { -> fzf***REMOVED***install(***REMOVED*** } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
@@ -44,22 +65,44 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 call plug***REMOVED***end(***REMOVED***
 
-autocmd vimenter * colorscheme gruvbox
-set background=dark    " Setting dark mode
+let mapleader = " "
+
+" gruvbox
+colorscheme gruvbox
+set background=dark
+
+let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors'***REMOVED***
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
 
+" remappinp
+nnoremap <c-p> :GFiles<CR>
+nnoremap <F1> :NERDTreeFind<CR>
+nnoremap <F2> :UndotreeToggle<CR>
+
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gs :G<CR>
+nmap <leader>gc :GCheckout<CR>
+
+" fzf
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+
+" telescope
+let g:telescope_cache_results = 1
+let g:telescope_prime_fuzzy_***REMOVED***nd  = 1
+
+" nerdtree
+let NERDTreeMinimalUI=1
+
 """"""""""""""""COC Con***REMOVED***g""""""""""""""" 
-set hidden
 set nowritebackup
 set cmdheight=2
 set updatetime=300
@@ -90,6 +133,11 @@ nmap <silent> gr <Plug>(coc-references***REMOVED***
 " show documentation on k
 nnoremap <silent> K :call <SID>show_documentation(***REMOVED***<CR>
 
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected***REMOVED***
+nmap <leader>a  <Plug>(coc-codeaction-selected***REMOVED***
+
 function! s:show_documentation(***REMOVED***
   if (index(['vim','help'], &***REMOVED***letype***REMOVED*** >= 0***REMOVED***
     execute 'h '.expand('<cword>'***REMOVED***
@@ -109,25 +157,5 @@ if exists('*complete_info'***REMOVED***
   inoremap <expr> <cr> pumvisible(***REMOVED*** ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
-""""""""""""""""end of COC Con***REMOVED***g""""""""""""""" 
+""""""""""""""""end of COC Con***REMOVED***g"""""""""""""""
 
-let mapleader = " "
-
-let g:java_highlight_all = 1
-
-" remappinp
-nnoremap <c-p> :Files<CR>
-nnoremap <F1> :NERDTreeFind<CR>
-nnoremap <F2> :UndotreeToggle<CR>
-
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
-nmap <leader>gc :GCheckout<CR>
-
-" fzf
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULT_OPTS='--reverse'
-
-" nerdtree
-let NERDTreeMinimalUI=1
