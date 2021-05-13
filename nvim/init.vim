@@ -50,21 +50,20 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 " Coc + coc-highlight + coc-yank
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" NerdTree
+Plug 'preservim/nerdtree' 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
+
 " other
 Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdtree' 
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'voldikss/vim-floaterm'
-
-" post install (yarn install | npm install***REMOVED*** then load plugin only for editing supported ***REMOVED***les
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug***REMOVED***end(***REMOVED***
 
@@ -76,15 +75,7 @@ set background=dark
 
 lua require("zhongjis"***REMOVED***
 
-let g:gruvbox_contrast_dark = 'hard'
-if exists('+termguicolors'***REMOVED***
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-let g:gruvbox_invert_selection='0'
-
 " remappinp
-nnoremap <F1> :NERDTreeFind<CR>
 nnoremap <F2> :UndotreeToggle<CR>
 
 nmap <leader>gh :diffget //3<CR>
@@ -92,23 +83,10 @@ nmap <leader>gu :diffget //2<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>gc :GCheckout<CR>
 
-" fzf
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULT_OPTS='--reverse'
-
-" telescope
-let g:telescope_cache_results = 1
-let g:telescope_prime_fuzzy_***REMOVED***nd  = 1
-
 " nerdtree
 let NERDTreeMinimalUI=1
 
 """"""""""""""""COC Con***REMOVED***g""""""""""""""" 
-set hidden
-set nowritebackup
-set cmdheight=2
-set updatetime=300
-set shortmess+=c
 
 " coc - use tab as suggestion selector
 inoremap <silent><expr> <TAB>
