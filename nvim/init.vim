@@ -58,7 +58,21 @@ Plug 'gruvbox-community/gruvbox'
 
 " LSP con***REMOVED***g
 Plug 'neovim/nvim-lspcon***REMOVED***g'
-Plug 'kabouzeid/nvim-lspinstall'
+Plug 'williamboman/nvim-lsp-installer'
+
+" LSP Cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind-nvim'
+
+" For vsnip users.
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+Plug 'simrat39/symbols-outline.nvim'
 
 " NerdTree
 Plug 'preservim/nerdtree' 
@@ -90,6 +104,9 @@ let NERDTreeMinimalUI=1
 
 " remapping leader key to space
 let mapleader = " "
+
+" complete options
+set completeopt=menu,menuone,noselect
 
 " remappinp
 nnoremap <F2> :UndotreeToggle<CR>
