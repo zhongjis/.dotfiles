@@ -45,12 +45,12 @@ local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args***REMOVED***
-      luasnip.lsp_expand(args.body***REMOVED***
+        vim.fn["vsnip***REMOVED***anonymous"](args.body***REMOVED*** 
     end,
   },
   mapping = {
-    ['<C-p>'] = cmp.mapping.select_prev_item(***REMOVED***,
-    ['<C-n>'] = cmp.mapping.select_next_item(***REMOVED***,
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(***REMOVED***, { 'i', 's' }***REMOVED***,    
+    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(***REMOVED***, { 'i', 's' }***REMOVED***,
     ['<C-d>'] = cmp.mapping.scroll_docs(-4***REMOVED***,
     ['<C-f>'] = cmp.mapping.scroll_docs(4***REMOVED***,
     ['<C-Space>'] = cmp.mapping.complete(***REMOVED***,
@@ -59,27 +59,9 @@ cmp.setup {
       behavior = cmp.Con***REMOVED***rmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = function(fallback***REMOVED***
-      if cmp.visible(***REMOVED*** then
-        cmp.select_next_item(***REMOVED***
-      ***REMOVED***if luasnip.expand_or_jumpable(***REMOVED*** then
-        luasnip.expand_or_jump(***REMOVED***
-      ***REMOVED***
-        fallback(***REMOVED***
-      end
-    end,
-    ['<S-Tab>'] = function(fallback***REMOVED***
-      if cmp.visible(***REMOVED*** then
-        cmp.select_prev_item(***REMOVED***
-      ***REMOVED***if luasnip.jumpable(-1***REMOVED*** then
-        luasnip.jump(-1***REMOVED***
-      ***REMOVED***
-        fallback(***REMOVED***
-      end
-    end,
   },
   sources = {
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = 'vsnip' },
   },
 }
