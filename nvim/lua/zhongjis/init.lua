@@ -1,4 +1,5 @@
 require("zhongjis.telescope"***REMOVED***
+require("zhongjis.treesitter"***REMOVED***
 require("zhongjis.lsp"***REMOVED***
 
 P = function(v***REMOVED***
