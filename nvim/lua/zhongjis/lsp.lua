@@ -11,12 +11,13 @@ local on_attach = function(_, bufnr***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help(***REMOVED***<CR>', opts***REMOVED***
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder(***REMOVED***<CR>', opts***REMOVED***
+  vim.api.nvim_buf_set_keymap(bufr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders(***REMOVED******REMOVED******REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_de***REMOVED***nition(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename(***REMOVED***<CR>', opts***REMOVED***
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references(***REMOVED***<CR>', opts***REMOVED***
+  -- vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references(***REMOVED***<CR>', opts***REMOVED***
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua require("goto-preview"***REMOVED***.goto_preview_references(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action(***REMOVED***<CR>', opts***REMOVED***
   -- vim.api.nvim_buf_set_keymap(bufnr, 'v', '<leader>ca', '<cmd>lua vim.lsp.buf.range_code_action(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics(***REMOVED***<CR>', opts***REMOVED***
@@ -42,7 +43,29 @@ end
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
+local lspkind = require('lspkind'***REMOVED***
+local source_mapping = {
+	buffer = "[Buffer]",
+	nvim_lsp = "[LSP]",
+	nvim_lua = "[Lua]",
+	cmp_tabnine = "[TN]",
+	path = "[Path]",
+}
 cmp.setup {
+  formatting = {
+  	format = function(entry, vim_item***REMOVED***
+  		vim_item.kind = lspkind.presets.default[vim_item.kind]
+  		local menu = source_mapping[entry.source.name]
+  		if entry.source.name == 'cmp_tabnine' then
+  			if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+  				menu = entry.completion_item.data.detail .. ' ' .. menu
+  			end
+  			vim_item.kind = ''
+  		end
+  		vim_item.menu = menu
+  		return vim_item
+  	end
+  },
   snippet = {
     expand = function(args***REMOVED***
         vim.fn["vsnip***REMOVED***anonymous"](args.body***REMOVED*** 
@@ -61,7 +84,24 @@ cmp.setup {
     },
   },
   sources = {
+    { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
   },
+}
+
+-- tabnine with nvim-cmp setup
+local tabnine = require('cmp_tabnine.con***REMOVED***g'***REMOVED***
+tabnine:setup({
+        max_lines = 1000;
+        max_num_results = 20;
+        sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+}***REMOVED***
+
+require('goto-preview'***REMOVED***.setup{
+    width = 140;
+    height = 30;
+    default_mappings = true;
 }
