@@ -1,4 +1,6 @@
 -- nvim-cmp setup
+vim.o.completeopt = "menuone,noselect"
+
 local cmp = require 'cmp'
 local lspkind = require('lspkind'***REMOVED***
 
@@ -7,7 +9,7 @@ local source_mapping = {
   nvim_lsp = "[LSP]",
   nvim_lua = "[Lua]",
   cmp_tabnine = "[TN]",
-  path = "[Path]",
+  path = "[Path]"
 }
 
 cmp.setup {
@@ -27,7 +29,10 @@ cmp.setup {
   },
   snippet = {
     expand = function(args***REMOVED***
-        vim.fn["vsnip***REMOVED***anonymous"](args.body***REMOVED*** 
+        -- vim.fn["vsnip***REMOVED***anonymous"](args.body***REMOVED*** -- For `vsnip` users.
+        require('luasnip'***REMOVED***.lsp_expand(args.body***REMOVED*** -- For `luasnip` users.
+        -- vim.fn["UltiSnips***REMOVED***Anon"](args.body***REMOVED*** -- For `ultisnips` users.
+        -- require'snippy'.expand_snippet(args.body***REMOVED*** -- For `snippy` users.    
     end,
   },
   mapping = {
@@ -42,12 +47,16 @@ cmp.setup {
       select = true,
     },
   },
-  sources = {
+  sources = cmp.con***REMOVED***g.sources({
     { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
-    { name = 'vsnip' },
+    -- { name = 'vsnip' }, -- For vsnip users.
+    { name = 'luasnip' }, -- For luasnip users.
+    -- { name = 'ultisnips' }, -- For ultisnips users.
+    -- { name = 'snippy' }, -- For snippy users.
+  }, {
     { name = 'buffer' },
-  },
+  }***REMOVED***,
 }
 
 -- tabnine with nvim-cmp setup

@@ -14,7 +14,6 @@ local on_attach = function(_, bufnr***REMOVED***
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua require"lspactions".rename(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', "<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes'***REMOVED***.get_cursor({}***REMOVED******REMOVED***<CR>", opts***REMOVED***
-  -- placeholder for show buffer diagnostics
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help(***REMOVED***<CR>', opts***REMOVED***
 
@@ -27,7 +26,9 @@ local on_attach = function(_, bufnr***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next(***REMOVED***<CR>', opts***REMOVED***
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua require"telescope.builtin".lsp_document_diagnostics(require("telescope.themes"***REMOVED***.get_ivy({}***REMOVED******REMOVED***<CR>', opts***REMOVED***
+
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>b', '<cmd>lua require"telescope.builtin".lsp_document_diagnostics(require("telescope.themes"***REMOVED***.get_ivy({}***REMOVED******REMOVED***<CR>', opts***REMOVED***
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q', '<cmd>lua require"telescope.builtin".lsp_workspace_diagnostics(require("telescope.themes"***REMOVED***.get_ivy({}***REMOVED******REMOVED***<CR>', opts***REMOVED*** 
 end
 
 -- nvim-cmp supports additional completion capabilities
