@@ -1,6 +1,8 @@
 require("zhongjis.telescope"***REMOVED***
 require("zhongjis.treesitter"***REMOVED***
-require("zhongjis.lsp"***REMOVED***
+require("zhongjis.lualine"***REMOVED***
+require("zhongjis.lsp.cmp"***REMOVED***
+require("zhongjis.lsp.con***REMOVED***g"***REMOVED***
 
 P = function(v***REMOVED***
   print(vim.inspect(v***REMOVED******REMOVED***

@@ -48,19 +48,25 @@ if empty(glob(data_dir . '/autoload/plug.vim'***REMOVED******REMOVED***
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Telescope Requirements...
+" Telescope
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'ThePrimeagen/git-worktree.nvim'
 
 " Theme
 Plug 'gruvbox-community/gruvbox'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " LSP con***REMOVED***g
 Plug 'neovim/nvim-lspcon***REMOVED***g'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'rmagatti/goto-preview'
+Plug 'mfussenegger/nvim-jdtls'
+
+" LSP Actions
+Plug 'tjdevries/astronauta.nvim'
+Plug 'RishabhRD/lspactions'
 
 " LSP Cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -74,9 +80,7 @@ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 " For vsnip users.
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-
-" CodeStructure
-Plug 'simrat39/symbols-outline.nvim'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
@@ -96,18 +100,24 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
+" lualine
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-lua/lsp-status.nvim'
+
 " Other
 Plug 'mbbill/undotree'
+Plug 'simrat39/symbols-outline.nvim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-airline/vim-airline'
 
 call plug***REMOVED***end(***REMOVED***
 
 " load lua settings
 lua require("zhongjis"***REMOVED***
 
-" gruvbox
-colorscheme gruvbox
+" theme
+" colorscheme gruvbox
+colorscheme palenight
 set background=dark
 
 " nerdtree
@@ -118,11 +128,3 @@ let mapleader = " "
 
 " complete options
 set completeopt=menu,menuone,noselect
-
-" remappinp
-nnoremap <F2> :UndotreeToggle<CR>
-
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
-nmap <leader>gc :GCheckout<CR>
