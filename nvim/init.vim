@@ -87,11 +87,9 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-" NerdTree
-Plug 'preservim/nerdtree' 
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
+" nvim-tree
+Plug 'kyazdani42/nvim-web-devicons' " for ***REMOVED***le icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -116,9 +114,6 @@ lua require("zhongjis"***REMOVED***
 " colorscheme gruvbox
 colorscheme palenight
 set background=dark
-
-" nerdtree
-let NERDTreeMinimalUI=1
 
 " remapping leader key to space
 let mapleader = " "
