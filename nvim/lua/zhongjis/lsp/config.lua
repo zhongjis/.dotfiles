@@ -1,7 +1,6 @@
 vim.lsp.set_log_level("debug"***REMOVED***
 
 -- LSP settings
-local nvim_lsp = require 'lspcon***REMOVED***g'
 local on_attach = function(_, bufnr***REMOVED***
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc'***REMOVED***
 

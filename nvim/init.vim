@@ -70,10 +70,10 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'onsails/lspkind-nvim'
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'onsails/lspkind-nvim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
@@ -100,6 +100,7 @@ Plug 'nvim-lua/lsp-status.nvim'
 Plug 'mbbill/undotree'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'svermeulen/vimpeccable'
 
 call plug***REMOVED***end(***REMOVED***
 
