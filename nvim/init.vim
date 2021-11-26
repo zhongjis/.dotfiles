@@ -62,7 +62,6 @@ Plug 'drewtempelmeyer/palenight.vim'
 " LSP con***REMOVED***g
 Plug 'neovim/nvim-lspcon***REMOVED***g'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'mfussenegger/nvim-jdtls'
 Plug 'ray-x/lsp_signature.nvim'
 
 " LSP Cmp

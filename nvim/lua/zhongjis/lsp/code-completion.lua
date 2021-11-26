@@ -1,13 +1,14 @@
 -- nvim-cmp setup
 vim.o.completeopt = "menuone,noselect"
 
-local cmp = require 'cmp'
+local cmp = require('cmp'***REMOVED***
 local lspkind = require('lspkind'***REMOVED***
 
 local source_mapping = {
   buffer = "[Buffer]",
   nvim_lsp = "[LSP]",
   nvim_lua = "[Lua]",
+  luasnip = "[LuaSnip]",
   cmp_tabnine = "[TN]",
   path = "[Path]"
 }
@@ -48,8 +49,8 @@ cmp.setup {
     },
   },
   sources = cmp.con***REMOVED***g.sources({
-    { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
+    { name = 'cmp_tabnine' },
     -- { name = 'vsnip' }, -- For vsnip users.
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
