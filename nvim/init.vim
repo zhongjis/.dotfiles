@@ -63,10 +63,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'neovim/nvim-lspcon***REMOVED***g'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'mfussenegger/nvim-jdtls'
-
-" LSP Actions
-Plug 'tjdevries/astronauta.nvim'
-Plug 'RishabhRD/lspactions'
+Plug 'ray-x/lsp_signature.nvim'
 
 " LSP Cmp
 Plug 'hrsh7th/cmp-nvim-lsp'

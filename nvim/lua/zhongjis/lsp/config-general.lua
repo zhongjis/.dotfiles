@@ -12,7 +12,7 @@ local on_attach = function(_, bufnr***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua require"telescope.builtin".lsp_implementations(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua require"telescope.builtin".lsp_references(***REMOVED***<CR>', opts***REMOVED***
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua require"lspactions".rename(***REMOVED***<CR>', opts***REMOVED***
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename(***REMOVED***<CR>', opts***REMOVED***
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', "<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes'***REMOVED***.get_cursor({}***REMOVED******REMOVED***<CR>", opts***REMOVED***
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help(***REMOVED***<CR>', opts***REMOVED***
@@ -36,7 +36,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities(***REMOVED***
 capabilities = require('cmp_nvim_lsp'***REMOVED***.update_capabilities(capabilities***REMOVED***
 
 -- Enable the following language servers
-
 local lsp_installer = require("nvim-lsp-installer"***REMOVED***
 local path = require("nvim-lsp-installer.path"***REMOVED***
 lsp_installer.on_server_ready(function (server***REMOVED***
@@ -46,4 +45,3 @@ lsp_installer.on_server_ready(function (server***REMOVED***
   }
   server:setup(opts***REMOVED***
 end***REMOVED***
-
