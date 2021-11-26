@@ -1,3 +1,4 @@
+require('zhongjis.gitsigns'***REMOVED***
 require("zhongjis.telescope"***REMOVED***
 require("zhongjis.treesitter"***REMOVED***
 require("zhongjis.lualine"***REMOVED***

@@ -95,7 +95,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'lewis6991/gitsigns.nvim'
 
 " lualine
 Plug 'nvim-lualine/lualine.nvim'

@@ -46,3 +46,4 @@ lsp_installer.on_server_ready(function (server***REMOVED***
   }
   server:setup(opts***REMOVED***
 end***REMOVED***
+
