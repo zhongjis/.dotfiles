@@ -32,11 +32,11 @@ cmp.setup {
         -- vim.fn["vsnip***REMOVED***anonymous"](args.body***REMOVED*** -- For `vsnip` users.
         require('luasnip'***REMOVED***.lsp_expand(args.body***REMOVED*** -- For `luasnip` users.
         -- vim.fn["UltiSnips***REMOVED***Anon"](args.body***REMOVED*** -- For `ultisnips` users.
-        -- require'snippy'.expand_snippet(args.body***REMOVED*** -- For `snippy` users.    
+        -- require'snippy'.expand_snippet(args.body***REMOVED*** -- For `snippy` users.
     end,
   },
   mapping = {
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(***REMOVED***, { 'i', 's' }***REMOVED***,    
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(***REMOVED***, { 'i', 's' }***REMOVED***,
     ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(***REMOVED***, { 'i', 's' }***REMOVED***,
     ['<C-d>'] = cmp.mapping.scroll_docs(-4***REMOVED***,
     ['<C-f>'] = cmp.mapping.scroll_docs(4***REMOVED***,

@@ -1,3 +1,3 @@
-require("zhongjis.ui.lualine"***REMOVED***
-require("zhongjis.ui.gitsigns"***REMOVED***
-require("zhongjis.ui.nvim-tree"***REMOVED***
+require("zhongjis.ui.statusline"***REMOVED***
+require("zhongjis.ui.gitgutter"***REMOVED***
+require("zhongjis.ui.tree"***REMOVED***

@@ -44,4 +44,4 @@ local con***REMOVED***g = {
   toggle_key = nil -- toggle signature on and off in insert mode,  e.g. toggle_key = '<M-x>'
 }
 
-require "lsp_signature".setup(con***REMOVED***g***REMOVED***
+-- require "lsp_signature".setup(con***REMOVED***g***REMOVED***
