@@ -35,6 +35,11 @@ require'nvim-tree'.setup {
     dot***REMOVED***les = true,
     custom = {}
   },
+***REMOVED***= {
+    enable = true,
+    ignore = true,
+    timeout = 500,
+  },
   view = {
     width = "15%",
     height = 30,

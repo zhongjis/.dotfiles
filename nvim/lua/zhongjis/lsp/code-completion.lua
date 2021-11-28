@@ -48,16 +48,20 @@ cmp.setup {
       select = true,
     },
   },
-  sources = cmp.con***REMOVED***g.sources({
+  sources = {
     { name = 'nvim_lsp' },
     { name = 'cmp_tabnine' },
     -- { name = 'vsnip' }, -- For vsnip users.
     { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
-  }, {
-    { name = 'buffer' },
-  }***REMOVED***,
+    { name = 'luasnip' },
+    { name = 'buffer',
+      option = {
+        get_bufnrs = function(***REMOVED*** return { vim.api.nvim_get_current_buf(***REMOVED*** } end
+      }
+    }
+  }
 }
 
 -- tabnine with nvim-cmp setup

@@ -1,4 +1,4 @@
-vim.lsp.set_log_level("debug"***REMOVED***
+vim.lsp.set_log_level("info"***REMOVED***
 
 -- LSP settings
 local on_attach = function(_, bufnr***REMOVED***
