@@ -8,7 +8,6 @@ local source_mapping = {
   buffer = "[Buffer]",
   nvim_lsp = "[LSP]",
   nvim_lua = "[Lua]",
-  luasnip = "[LuaSnip]",
   cmp_tabnine = "[TN]",
   path = "[Path]"
 }
