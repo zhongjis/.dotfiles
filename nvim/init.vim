@@ -48,9 +48,11 @@ if empty(glob(data_dir . '/autoload/plug.vim'***REMOVED******REMOVED***
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Telescope
+" Dependencies
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
+
+" Telescope
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'ThePrimeagen/git-worktree.nvim'
@@ -59,19 +61,21 @@ Plug 'ThePrimeagen/git-worktree.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'drewtempelmeyer/palenight.vim'
 
+Plug 'L3MON4D3/LuaSnip'
+
 " LSP con***REMOVED***g
 Plug 'neovim/nvim-lspcon***REMOVED***g'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'ray-x/lsp_signature.nvim'
+Plug 'mfussenegger/nvim-jdtls'
+" Plug 'ray-x/lsp_signature.nvim'
 
 " LSP Cmp
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
 
@@ -94,7 +98,6 @@ Plug 'lewis6991/gitsigns.nvim'
 " lualine
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'nvim-lua/lsp-status.nvim'
 
 " Other
 Plug 'mbbill/undotree'
