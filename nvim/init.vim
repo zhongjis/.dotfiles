@@ -67,7 +67,6 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'neovim/nvim-lspcon***REMOVED***g'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'mfussenegger/nvim-jdtls'
-Plug 'ray-x/lsp_signature.nvim'
 
 " LSP Cmp
 Plug 'hrsh7th/nvim-cmp'
