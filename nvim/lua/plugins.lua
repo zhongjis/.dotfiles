@@ -1,16 +1,17 @@
--- packer bootstrap
-local fn = vim.fn
-local install_path = fn.stdpath('data'***REMOVED***..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path***REMOVED******REMOVED*** > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}***REMOVED***
-end
-
+-- auto compile everytime when this ***REMOVED***le changes
 vim.cmd([[
   augroup packer_user_con***REMOVED***g
     autocmd!
     autocmd BufWritePost plugins.lua source <a***REMOVED***le> | PackerCompile
   augroup end
 ]]***REMOVED***
+
+-- packer bootstrap
+local fn = vim.fn
+local install_path = fn.stdpath('data'***REMOVED***..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path***REMOVED******REMOVED*** > 0 then
+  _PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}***REMOVED***
+end
 
 return require('packer'***REMOVED***.startup(function(use***REMOVED***
   -- Packer can manage itself
@@ -34,8 +35,11 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
   use {
     'neovim/nvim-lspcon***REMOVED***g',
     'williamboman/nvim-lsp-installer',
-    'mfussenegger/nvim-jdtls'
+    {'mfussenegger/nvim-jdtls', ft='java'}
   }
+
+  -- Treesitter
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
   -- Code Completion
   use {
@@ -54,9 +58,6 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     }
   }
 
-  -- Treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-
   -- google vim-codefmt
   use {
     'google/vim-maktaba',
@@ -66,25 +67,22 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     }
   }
 
-  -- nvim-tree
+  -- UI
   use {
     'kyazdani42/nvim-tree.lua',
     requries = {'kyazdani42/nvim-web-devicons'}
   }
-
-  -- Git
-  use 'tpope/vim-fugitive'
   use {
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'},
     -- tag = 'release' -- To use the latest release
   }
-
-  --  lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
+
+  -- Git
 
   -- Other
   use {
@@ -92,11 +90,12 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     'simrat39/symbols-outline.nvim',
     'jiangmiao/auto-pairs',
     'svermeulen/vimpeccable',
+    'tpope/vim-fugitive',
   }
 
   -- Automatically set up your con***REMOVED***guration after cloning packer.nvim
   -- Put this at the end after all plugins
-  if packer_bootstrap then
+  if _PACKER_BOOTSTRAP then
     require('packer'***REMOVED***.sync(***REMOVED***
   end
 end***REMOVED***
