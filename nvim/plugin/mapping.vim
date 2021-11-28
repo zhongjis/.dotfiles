@@ -1,2 +1,2 @@
-nnoremap <F2> :UndotreeToggle<CR>
-nnoremap <F3> :SymbolsOutline<CR>
+nnoremap <silent> <F2> :UndotreeToggle<CR>
+nnoremap <silent> <F3> :SymbolsOutline<CR>
