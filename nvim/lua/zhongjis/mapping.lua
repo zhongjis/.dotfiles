@@ -1,9 +1,9 @@
 local M = {}
 
-M.lsp_on_attach = function(bufnr***REMOVED***
+M.lsp_attach_mapping = function(bufnr***REMOVED***
     local opts = {
         noremap = true,
-        silent = false
+        silent = true
     }
     -- code actions
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover(***REMOVED***<CR>', opts***REMOVED***
@@ -35,7 +35,38 @@ M.lsp_on_attach = function(bufnr***REMOVED***
         opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q',
         '<cmd>lua require"telescope.builtin".lsp_workspace_diagnostics(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', ':FormatCode<CR>', opts***REMOVED***
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>FormatCode<CR>', opts***REMOVED***
+end
+
+
+M.global_mapping = function(***REMOVED***
+    local opts = {
+        noremap = true,
+        silent = false,
+    }
+
+    -- basics
+    vim.api.nvim_set_keymap('n', '<F1>', '<cmd>NvimTreeFindFile<CR>', opts***REMOVED***
+    vim.api.nvim_set_keymap('n', '<F2>', '<cmd>UndotreeToggle<CR>', opts***REMOVED***
+    vim.api.nvim_set_keymap('n', '<F3>', '<cmd>SymbolsOutline<CR>', opts***REMOVED***
+
+    ---- telescope
+    --vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>lua require("telescope.builtin"***REMOVED***.git_***REMOVED***les(***REMOVED***<CR>', opts***REMOVED***
+    --vim.api.nvim_set_keymap('n', '<leader>pf', '<cmd>lua require("telescope.builtin"***REMOVED***.***REMOVED***nd_***REMOVED***les(***REMOVED***<CR>', opts***REMOVED***
+    --vim.api.nvim_set_keymap('n', '<leader>ps', '<cmd>lua require("telescope.builtin"***REMOVED***.grep_string({ search = vim.fn.input("Grep For > "***REMOVED***}***REMOVED***<CR>', opts***REMOVED***
+
+    --vim.api.nvim_set_keymap('n', '<leader>pw', '<cmd>lua require("telescope.builtin"***REMOVED***.grep_string { search = vim.fn.expand("<cword>"***REMOVED*** }<CR>', opts***REMOVED***
+    --vim.api.nvim_set_keymap('n', '<leader>pb', '<cmd>lua require("telescope.builtin"***REMOVED***.buffers(***REMOVED***<CR>', opts***REMOVED***
+    --vim.api.nvim_set_keymap('n', '<leader>vh', '<cmd>lua require("telescope.builtin"***REMOVED***.help_tags(***REMOVED***<CR>', opts***REMOVED***
+
+    --vim.api.nvim_set_keymap('n', '<leader>gw', '<cmd>lua require("telescope"***REMOVED***.extensions.git_worktree.git_worktrees(***REMOVED***<CR>', opts***REMOVED***
+    --vim.api.nvim_set_keymap('n', '<leader>gm', '<cmd>lua require("telescope"***REMOVED***.extensions.git_worktree.create_git_worktree(***REMOVED***<CR>', opts***REMOVED***
+
+    --vim.api.nvim_set_keymap('n', '<leader>vrc', '<cmd>lua require("zhongjis.telescope"***REMOVED***.search_dot***REMOVED***les(***REMOVED***<CR>', opts***REMOVED***
+
+    ---- git - fugitive
+    --vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>G<CR>', opts***REMOVED***
+    --vim.api.nvim_set_keymap('n', '<leader>gc', '<cmd>GCheckout<CR>', opts***REMOVED***
 end
 
 return M

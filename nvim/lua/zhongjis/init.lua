@@ -1,3 +1,4 @@
+require("zhongjis.mapping"***REMOVED***.global_mapping(***REMOVED***
 require("zhongjis.telescope"***REMOVED***
 require("zhongjis.lsp"***REMOVED***
 require("zhongjis.ui"***REMOVED***

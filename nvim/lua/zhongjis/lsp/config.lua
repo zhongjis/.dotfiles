@@ -4,7 +4,7 @@ vim.lsp.set_log_level("info"***REMOVED***
 local on_attach = function(_, bufnr***REMOVED***
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc'***REMOVED***
 
-    require('zhongjis.mapping'***REMOVED***.lsp_on_attach(bufnr***REMOVED***
+    require('zhongjis.mapping'***REMOVED***.lsp_attach_mapping(bufnr***REMOVED***
 
 end
 
