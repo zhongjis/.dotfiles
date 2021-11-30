@@ -8,7 +8,7 @@ require('telescope'***REMOVED***.setup {
         ***REMOVED***le_previewer   = require('telescope.previewers'***REMOVED***.vim_buffer_cat.new,
         grep_previewer   = require('telescope.previewers'***REMOVED***.vim_buffer_vimgrep.new,
         qflist_previewer = require('telescope.previewers'***REMOVED***.vim_buffer_qflist.new,
-        
+
         initial_mode = 'normal',
 
         mappings = {
@@ -27,6 +27,16 @@ require('telescope'***REMOVED***.setup {
 }
 
 require('telescope'***REMOVED***.load_extension('fzy_native'***REMOVED***
+
+require("git-worktree"***REMOVED***.setup {
+    change_directory_command = "cd",
+    update_on_change = true,
+    update_on_change_command = "e .",
+    clearjumps_on_change = true,
+    autopush = false,
+}
+
+require("telescope"***REMOVED***.load_extension("git_worktree"***REMOVED***
 
 -- customized funcs
 local M = {}

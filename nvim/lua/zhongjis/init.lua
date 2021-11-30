@@ -1,5 +1,4 @@
 require("zhongjis.telescope"***REMOVED***
-require("zhongjis.treesitter"***REMOVED***
 require("zhongjis.lsp"***REMOVED***
 require("zhongjis.ui"***REMOVED***
 

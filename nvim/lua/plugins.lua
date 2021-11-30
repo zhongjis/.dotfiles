@@ -39,7 +39,10 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
   }
 
   -- Treesitter
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {
+      'p00f/nvim-ts-rainbow',
+      requires = {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  }
 
   -- Code Completion
   use {
