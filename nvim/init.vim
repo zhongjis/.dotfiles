@@ -23,7 +23,6 @@ set incsearch
 set termguicolors
 set scrolloff=8
 set noshowmode
-set completeopt=menuone,noinsert,noselect
 set signcolumn=yes
 
 " Give more space for displaying messages.

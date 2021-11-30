@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["format.nvim"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/format.nvim",
+    url = "https://github.com/lukas-reineke/format.nvim"
+  },
   ["git-worktree.nvim"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
