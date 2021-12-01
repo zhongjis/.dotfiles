@@ -69,45 +69,25 @@ end
 time([[try_loadstring de***REMOVED***nition]], false***REMOVED***
 time([[De***REMOVED***ning packer_plugins]], true***REMOVED***
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
-  },
-  ["cmp-buffer"] = {
-    loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
   ["cmp-tabnine"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
     url = "https://github.com/tzachar/cmp-tabnine"
   },
-  cmp_luasnip = {
+  ["cmp-vsnip"] = {
     loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["format.nvim"] = {
     loaded = true,
@@ -128,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
-  },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -235,6 +210,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/vim-maktaba",
     url = "https://github.com/google/vim-maktaba"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
   },
   vimpeccable = {
     loaded = true,

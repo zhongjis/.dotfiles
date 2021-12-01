@@ -24,7 +24,7 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         'ThePrimeagen/git-worktree.nvim',
         requires = use {
             'nvim-telescope/telescope.nvim',
-            requires = {'nvim-lua/plenary.nvim'}
+            requires = use {'nvim-lua/plenary.nvim'}
         }
     }
 
@@ -50,12 +50,9 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     -- Code Completion
     use {
         'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
-        'hrsh7th/cmp-cmdline',
         {
-            'saadparwaiz1/cmp_luasnip',
-            requires = use {'L3MON4D3/LuaSnip'}
+            'hrsh7th/cmp-vsnip',
+            requires = use {'hrsh7th/vim-vsnip'}
         },
         {
             'tzachar/cmp-tabnine',
@@ -63,30 +60,29 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         },
         requries = use {
             'hrsh7th/nvim-cmp',
-            requires = {'onsails/lspkind-nvim'}
         }
     }
 
     -- format
     use {
         'google/vim-maktaba',
-        requires = {'google/vim-codefmt', 'google/vim-glaive'}
+        requires = use {'google/vim-codefmt', 'google/vim-glaive'}
     }
     use {'lukas-reineke/format.nvim'}
 
     -- UI
     use {
         'kyazdani42/nvim-tree.lua',
-        requries = {'kyazdani42/nvim-web-devicons'}
+        requries = use {'kyazdani42/nvim-web-devicons'}
     }
     use {
         'lewis6991/gitsigns.nvim',
-        requires = {'nvim-lua/plenary.nvim'}
+        requires = use {'nvim-lua/plenary.nvim'}
         -- tag = 'release' -- To use the latest release
     }
     use {
         'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons'}
+        requires = use {'kyazdani42/nvim-web-devicons'}
     }
 
     -- Other
