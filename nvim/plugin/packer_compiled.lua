@@ -57,7 +57,7 @@ end
 time([[Luarocks path setup]], false***REMOVED***
 time([[try_loadstring de***REMOVED***nition]], true***REMOVED***
 local function try_loadstring(s, component, name***REMOVED***
-  local success, result = pcall(loadstring(s***REMOVED******REMOVED***
+  local success, result = pcall(loadstring(s***REMOVED***, name, _G.packer_plugins[name]***REMOVED***
   if not success then
     vim.schedule(function(***REMOVED***
       vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {}***REMOVED***

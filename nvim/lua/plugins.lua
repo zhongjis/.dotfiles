@@ -54,14 +54,16 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         {
+            'saadparwaiz1/cmp_luasnip',
+            requires = use {'L3MON4D3/LuaSnip'}
+        },
+        {
             'tzachar/cmp-tabnine',
             run = './install.sh',
-            requires = 'hrsh7th/nvim-cmp'
         },
-        'saadparwaiz1/cmp_luasnip',
         requries = use {
             'hrsh7th/nvim-cmp',
-            requires = {'L3MON4D3/LuaSnip', 'onsails/lspkind-nvim'}
+            requires = {'onsails/lspkind-nvim'}
         }
     }
 
