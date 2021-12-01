@@ -72,15 +72,12 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
 
     -- UI
     use {
-        'kyazdani42/nvim-tree.lua',
-        requries = use {'kyazdani42/nvim-web-devicons'}
-    }
-    use {
         'lewis6991/gitsigns.nvim',
         requires = use {'nvim-lua/plenary.nvim'}
         -- tag = 'release' -- To use the latest release
     }
     use {
+        'kyazdani42/nvim-tree.lua',
         'nvim-lualine/lualine.nvim',
         requires = use {'kyazdani42/nvim-web-devicons'}
     }
