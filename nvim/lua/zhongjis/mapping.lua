@@ -39,7 +39,7 @@ M.lsp_attach_mapping = function(bufnr***REMOVED***
 end
 
 
-M.global_mapping = function(***REMOVED***
+M.setup = function(***REMOVED***
     local opts = {
         noremap = true,
         silent = false,

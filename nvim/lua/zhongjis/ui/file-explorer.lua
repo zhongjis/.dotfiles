@@ -86,4 +86,10 @@ local con***REMOVED***g = {
   }
 }
 
-require'nvim-tree'.setup(con***REMOVED***g***REMOVED***
+local M = {}
+
+M.setup = function(***REMOVED***
+    require'nvim-tree'.setup(con***REMOVED***g***REMOVED***
+end
+
+return M

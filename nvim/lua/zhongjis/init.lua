@@ -1,7 +1,7 @@
-require("zhongjis.mapping"***REMOVED***.global_mapping(***REMOVED***
-require("zhongjis.telescope"***REMOVED***
-require("zhongjis.lsp"***REMOVED***
 require("zhongjis.ui"***REMOVED***
+require("zhongjis.mapping"***REMOVED***.setup(***REMOVED***
+require("zhongjis.telescope"***REMOVED***.setup(***REMOVED***
+require("zhongjis.lsp"***REMOVED***
 
 P = function(v***REMOVED***
     print(vim.inspect(v***REMOVED******REMOVED***
