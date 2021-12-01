@@ -9,8 +9,7 @@ local on_attach = function(_, bufnr***REMOVED***
 end
 
 -- nvim-cmp supports additional completion capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities(***REMOVED***
-capabilities = require('cmp_nvim_lsp'***REMOVED***.update_capabilities(capabilities***REMOVED***
+local capabilities =require('cmp_nvim_lsp'***REMOVED***.update_capabilities(vim.lsp.protocol.make_client_capabilities(***REMOVED******REMOVED***
 
 -- Enable the following language servers
 local lsp_installer = require("nvim-lsp-installer"***REMOVED***

@@ -2,6 +2,7 @@ nnoremap <silent> <C-p> :lua require('telescope.builtin'***REMOVED***.git_***REM
 nnoremap <silent> <Leader>pf :lua require('telescope.builtin'***REMOVED***.***REMOVED***nd_***REMOVED***les(***REMOVED***<CR>
 nnoremap <silent> <leader>ps :lua require('telescope.builtin'***REMOVED***.grep_string({ search = vim.fn.input("Grep For > "***REMOVED***}***REMOVED***<CR>
 
+nnoremap <silent> <leader>lg :lua require('telescope.builtin'***REMOVED***.live_grep(***REMOVED***<CR>
 nnoremap <silent> <leader>pw :lua require('telescope.builtin'***REMOVED***.grep_string { search = vim.fn.expand("<cword>"***REMOVED*** }<CR>
 nnoremap <silent> <leader>pb :lua require('telescope.builtin'***REMOVED***.buffers(***REMOVED***<CR>
 nnoremap <silent> <leader>vh :lua require('telescope.builtin'***REMOVED***.help_tags(***REMOVED***<CR>
