@@ -19,8 +19,16 @@ require('telescope'***REMOVED***.setup {
             }
         }
     },
+    pickers = {
+        lsp_code_actions = {
+            theme = "cursor",
+        },
+        lsp_range_code_actions = {
+            theme = "cursor",
+        },
+    },
     extensions = {
-        fzy_native = {
+        ['fzy_native'] = {
             override_generic_sorter = false,
             override_***REMOVED***le_sorter = true
         }
