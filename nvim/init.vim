@@ -5,7 +5,6 @@ packloadall
 
 set exrc
 set relativenumber
-set nohlsearch
 set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -47,6 +46,3 @@ lua require("zhongjis"***REMOVED***
 " theme
 " colorscheme gruvbox
 colorscheme palenight
-set background=dark
-
-
