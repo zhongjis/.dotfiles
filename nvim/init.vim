@@ -1,6 +1,6 @@
 packloadall
 
-syntax on
+" syntax on
 ***REMOVED***letype plugin indent on
 
 set exrc

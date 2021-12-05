@@ -30,8 +30,10 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     }
 
     -- Theme
-    use 'gruvbox-community/gruvbox'
-    use 'drewtempelmeyer/palenight.vim'
+    use {
+        'gruvbox-community/gruvbox',
+        'drewtempelmeyer/palenight.vim'
+    }
 
     -- LSP con***REMOVED***g
     use {
