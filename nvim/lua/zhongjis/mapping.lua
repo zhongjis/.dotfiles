@@ -1,6 +1,7 @@
 -- global mapping
 -- remap mapleader
 vim.g.mapleader = ' '
+vim.env.DOTFILES = "~/.con***REMOVED***g/nvim"
 
 local opts = {
     noremap = true,
@@ -25,7 +26,7 @@ vim.api.nvim_set_keymap('n', '<leader>vh', '<cmd>lua require("telescope.builtin"
 vim.api.nvim_set_keymap('n', '<leader>gw', '<cmd>lua require("telescope"***REMOVED***.extensions.git_worktree.git_worktrees(***REMOVED***<CR>', opts***REMOVED***
 vim.api.nvim_set_keymap('n', '<leader>gm', '<cmd>lua require("telescope"***REMOVED***.extensions.git_worktree.create_git_worktree(***REMOVED***<CR>', opts***REMOVED***
 
-vim.api.nvim_set_keymap('n', '<leader>vrc', '<cmd>lua require("zhongjis.telescope"***REMOVED***.search_dot***REMOVED***les(***REMOVED***<CR>', opts***REMOVED***
+vim.api.nvim_set_keymap('n', '<leader>vrc', '<cmd>lua require("zhongjis.telescope.customized"***REMOVED***.search_dot***REMOVED***les(***REMOVED***<CR>', opts***REMOVED***
 
 -- git - fugitive
 vim.api.nvim_set_keymap('n', '<leader>gs', '<cmd>G<CR>', opts***REMOVED***

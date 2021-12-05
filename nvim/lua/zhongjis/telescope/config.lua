@@ -1,4 +1,4 @@
--- telescope
+-- setup
 local actions = require('telescope.actions'***REMOVED***
 require('telescope'***REMOVED***.setup {
     defaults = {
@@ -27,8 +27,7 @@ require('telescope'***REMOVED***.setup {
     }
 }
 
--- telescope extensions
-require('telescope'***REMOVED***.load_extension('fzy_native'***REMOVED***
+-- extensions
 require("git-worktree"***REMOVED***.setup {
     change_directory_command = "cd",
     update_on_change = true,
@@ -37,16 +36,4 @@ require("git-worktree"***REMOVED***.setup {
     autopush = false
 }
 require("telescope"***REMOVED***.load_extension("git_worktree"***REMOVED***
-
-local M = {}
-
--- customized funcs
-M.search_dot***REMOVED***les = function(***REMOVED***
-    require("telescope.builtin"***REMOVED***.***REMOVED***nd_***REMOVED***les({
-        prompt_title = "< VimRC >",
-        cwd = vim.env.DOTFILES,
-        hidden = true
-    }***REMOVED***
-end
-
-return M
+require('telescope'***REMOVED***.load_extension('fzy_native'***REMOVED***
