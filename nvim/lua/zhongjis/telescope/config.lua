@@ -19,14 +19,6 @@ require('telescope'***REMOVED***.setup {
             }
         }
     },
-    pickers = {
-        lsp_code_actions = {
-            theme = "cursor",
-        },
-        lsp_range_code_actions = {
-            theme = "cursor",
-        },
-    },
     extensions = {
         ['fzy_native'] = {
             override_generic_sorter = false,
@@ -43,5 +35,5 @@ require("git-worktree"***REMOVED***.setup {
     clearjumps_on_change = true,
     autopush = false
 }
-require("telescope"***REMOVED***.load_extension("git_worktree"***REMOVED***
+require('telescope'***REMOVED***.load_extension('git_worktree'***REMOVED***
 require('telescope'***REMOVED***.load_extension('fzy_native'***REMOVED***
