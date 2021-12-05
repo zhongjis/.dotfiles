@@ -39,10 +39,7 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     use {
         'neovim/nvim-lspcon***REMOVED***g',
         'williamboman/nvim-lsp-installer',
-        {
-            'mfussenegger/nvim-jdtls',
-            ft = 'java'
-        }
+        'mfussenegger/nvim-jdtls',
     }
 
     -- Treesitter

@@ -1,6 +1,6 @@
 require("zhongjis.ui"***REMOVED***
 require("zhongjis.mapping"***REMOVED***
-require("zhongjis.telescope"***REMOVED***.setup(***REMOVED***
+require("zhongjis.telescope"***REMOVED***
 require("zhongjis.lsp"***REMOVED***
 
 P = function(v***REMOVED***

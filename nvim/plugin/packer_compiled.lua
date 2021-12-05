@@ -120,10 +120,8 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-jdtls"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/opt/nvim-jdtls",
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
     url = "https://github.com/mfussenegger/nvim-jdtls"
   },
   ["nvim-lsp-installer"] = {
@@ -224,13 +222,6 @@ _G.packer_plugins = {
 }
 
 time([[De***REMOVED***ning packer_plugins]], false***REMOVED***
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[De***REMOVED***ning lazy-load ***REMOVED***letype autocommands]], true***REMOVED***
-vim.cmd [[au FileType java ++once lua require("packer.load"***REMOVED***({'nvim-jdtls'}, { ft = "java" }, _G.packer_plugins***REMOVED***]]
-time([[De***REMOVED***ning lazy-load ***REMOVED***letype autocommands]], false***REMOVED***
-vim.cmd("augroup END"***REMOVED***
 if should_pro***REMOVED***le then save_pro***REMOVED***les(***REMOVED*** end
 
 end***REMOVED***

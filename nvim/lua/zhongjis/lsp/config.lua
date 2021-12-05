@@ -13,7 +13,6 @@ local capabilities =require('cmp_nvim_lsp'***REMOVED***.update_capabilities(vim.
 
 -- Enable the following language servers
 local lsp_installer = require("nvim-lsp-installer"***REMOVED***
-local path = require("nvim-lsp-installer.path"***REMOVED***
 lsp_installer.on_server_ready(function(server***REMOVED***
     local opts = {
         on_attach = on_attach,
