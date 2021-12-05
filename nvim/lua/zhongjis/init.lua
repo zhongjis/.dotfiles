@@ -1,5 +1,5 @@
 require("zhongjis.ui"***REMOVED***
-require("zhongjis.mapping"***REMOVED***.setup(***REMOVED***
+require("zhongjis.mapping"***REMOVED***
 require("zhongjis.telescope"***REMOVED***.setup(***REMOVED***
 require("zhongjis.lsp"***REMOVED***
 

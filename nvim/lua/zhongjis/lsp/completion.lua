@@ -96,8 +96,8 @@ cmp.setup {
         }
     },
     sources = {
-        { name = 'vsnip' },
         { name = 'cmp_tabnine' },
+        { name = 'vsnip' },
         { name = 'nvim_lsp' },
     }
 }

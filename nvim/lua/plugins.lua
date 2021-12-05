@@ -10,8 +10,7 @@ vim.cmd([[
 local fn = vim.fn
 local install_path = fn.stdpath('data'***REMOVED*** .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path***REMOVED******REMOVED*** > 0 then
-    _PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
-                                   install_path}***REMOVED***
+    _PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}***REMOVED***
 end
 
 return require('packer'***REMOVED***.startup(function(use***REMOVED***
@@ -22,6 +21,8 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     use {
         'nvim-telescope/telescope-fzy-native.nvim',
         'ThePrimeagen/git-worktree.nvim',
+
+        'lewis6991/gitsigns.nvim',
         requires = use {
             'nvim-telescope/telescope.nvim',
             requires = use {'nvim-lua/plenary.nvim'}
@@ -33,10 +34,14 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     use 'drewtempelmeyer/palenight.vim'
 
     -- LSP con***REMOVED***g
-    use {'neovim/nvim-lspcon***REMOVED***g', 'williamboman/nvim-lsp-installer', {
-        'mfussenegger/nvim-jdtls',
-        ft = 'java'
-    }}
+    use {
+        'neovim/nvim-lspcon***REMOVED***g',
+        'williamboman/nvim-lsp-installer',
+        {
+            'mfussenegger/nvim-jdtls',
+            ft = 'java'
+        }
+    }
 
     -- Treesitter
     use {
@@ -66,16 +71,15 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     -- format
     use {
         'google/vim-maktaba',
-        requires = use {'google/vim-codefmt', 'google/vim-glaive'}
+        requires = use {
+            'google/vim-codefmt',
+            'google/vim-glaive',
+            ft = 'java'
+        }
     }
     use {'lukas-reineke/format.nvim'}
 
     -- UI
-    use {
-        'lewis6991/gitsigns.nvim',
-        requires = use {'nvim-lua/plenary.nvim'}
-        -- tag = 'release' -- To use the latest release
-    }
     use {
         'kyazdani42/nvim-tree.lua',
         'nvim-lualine/lualine.nvim',
