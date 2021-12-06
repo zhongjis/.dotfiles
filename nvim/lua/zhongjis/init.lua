@@ -3,6 +3,8 @@ require("zhongjis.mapping"***REMOVED***
 require("zhongjis.telescope"***REMOVED***
 require("zhongjis.lsp"***REMOVED***
 
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb(***REMOVED***]]
+
 P = function(v***REMOVED***
     print(vim.inspect(v***REMOVED******REMOVED***
     return v

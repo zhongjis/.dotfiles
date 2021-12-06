@@ -69,6 +69,11 @@ end
 time([[try_loadstring de***REMOVED***nition]], false***REMOVED***
 time([[De***REMOVED***ning packer_plugins]], true***REMOVED***
 _G.packer_plugins = {
+  ["astronauta.nvim"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/astronauta.nvim",
+    url = "https://github.com/tjdevries/astronauta.nvim"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -109,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
+  lspactions = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/lspactions",
+    url = "https://github.com/RishabhRD/lspactions"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -123,6 +133,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
     url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
+  ["nvim-lightbulb"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/nvim-lightbulb",
+    url = "https://github.com/kosayoda/nvim-lightbulb"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -168,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,

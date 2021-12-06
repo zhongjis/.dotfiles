@@ -42,7 +42,16 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         'mfussenegger/nvim-jdtls',
     }
 
-    -- Treesitter
+    use {
+        'RishabhRD/lspactions',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'nvim-lua/popup.nvim',
+            'tjdevries/astronauta.nvim',
+        }
+    }
+
+    -- Syntax
     use {
         'p00f/nvim-ts-rainbow',
         requires = {
@@ -84,6 +93,7 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         'nvim-lualine/lualine.nvim',
         requires = use {'kyazdani42/nvim-web-devicons'}
     }
+    use 'kosayoda/nvim-lightbulb'
 
     -- Other
     use {'mbbill/undotree', 'simrat39/symbols-outline.nvim', 'jiangmiao/auto-pairs', 'svermeulen/vimpeccable',
