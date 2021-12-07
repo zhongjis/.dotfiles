@@ -209,6 +209,12 @@ _G.packer_plugins = {
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["trouble.nvim"] = {
+    con***REMOVED***g = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/undotree",
@@ -247,6 +253,10 @@ _G.packer_plugins = {
 }
 
 time([[De***REMOVED***ning packer_plugins]], false***REMOVED***
+-- Con***REMOVED***g for: trouble.nvim
+time([[Con***REMOVED***g for trouble.nvim]], true***REMOVED***
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "con***REMOVED***g", "trouble.nvim"***REMOVED***
+time([[Con***REMOVED***g for trouble.nvim]], false***REMOVED***
 if should_pro***REMOVED***le then save_pro***REMOVED***les(***REMOVED*** end
 
 end***REMOVED***

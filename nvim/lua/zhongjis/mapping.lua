@@ -42,7 +42,7 @@ M.lsp_attach_mapping = function(bufnr***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua require"telescope.builtin".lsp_de***REMOVED***nitions(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua require"telescope.builtin".lsp_references(***REMOVED***<CR>', opts***REMOVED***
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>TroubleToggle lsp_references<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua require"telescope.builtin".lsp_implementations(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gs', '<cmd>lua vim.lsp.buf.signature_help(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_de***REMOVED***nition(***REMOVED***<CR>', opts***REMOVED***
@@ -66,10 +66,10 @@ M.lsp_attach_mapping = function(bufnr***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next(***REMOVED***<CR>', opts***REMOVED***
 
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>b',
-        '<cmd>lua require"telescope.builtin".lsp_document_diagnostics(require("telescope.themes"***REMOVED***.get_ivy({}***REMOVED******REMOVED***<CR>',
+        '<cmd>TroubleToggle lsp_document_diagnostics<CR>',
         opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q',
-        '<cmd>lua require"telescope.builtin".lsp_workspace_diagnostics(***REMOVED***<CR>', opts***REMOVED***
+        '<cmd>TroubleToggle lsp_workspace_diagnostics<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>FormatCode<CR>', opts***REMOVED***
 end
 
@@ -78,7 +78,7 @@ M.jdtls_attach_mapping = function(bufnr***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua require"telescope.builtin".lsp_de***REMOVED***nitions(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua require"telescope.builtin".lsp_references(***REMOVED***<CR>', opts***REMOVED***
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>TroubleToggle lsp_references<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua require"telescope.builtin".lsp_implementations(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gs', '<cmd>lua vim.lsp.buf.signature_help(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_de***REMOVED***nition(***REMOVED***<CR>', opts***REMOVED***
@@ -100,10 +100,10 @@ M.jdtls_attach_mapping = function(bufnr***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next(***REMOVED***<CR>', opts***REMOVED***
 
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>b',
-        '<cmd>lua require"telescope.builtin".lsp_document_diagnostics(require("telescope.themes"***REMOVED***.get_ivy({}***REMOVED******REMOVED***<CR>',
+        '<cmd>TroubleToggle lsp_document_diagnostics<CR>',
         opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q',
-        '<cmd>lua require"telescope.builtin".lsp_workspace_diagnostics(***REMOVED***<CR>', opts***REMOVED***
+        '<cmd>TroubleToggle lsp_workspace_diagnostics<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>FormatCode<CR>', opts***REMOVED***
 end
 
