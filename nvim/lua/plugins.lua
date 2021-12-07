@@ -22,7 +22,6 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         'nvim-telescope/telescope-fzy-native.nvim',
         'ThePrimeagen/git-worktree.nvim',
 
-        'lewis6991/gitsigns.nvim',
         requires = use {
             'nvim-telescope/telescope.nvim',
             requires = use {'nvim-lua/plenary.nvim'}
@@ -32,7 +31,8 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     -- Theme
     use {
         'gruvbox-community/gruvbox',
-        'drewtempelmeyer/palenight.vim'
+        'drewtempelmeyer/palenight.vim',
+        'sainnhe/gruvbox-material'
     }
 
     -- LSP con***REMOVED***g
@@ -88,6 +88,10 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     use {'lukas-reineke/format.nvim'}
 
     -- UI
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {'nvim-lua/plenary.nvim'}
+    }
     use {
         'kyazdani42/nvim-tree.lua',
         'nvim-lualine/lualine.nvim',

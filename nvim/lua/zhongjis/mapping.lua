@@ -5,7 +5,6 @@ vim.env.DOTFILES = "~/.con***REMOVED***g/nvim"
 
 vim.ui.select = require'lspactions'.select
 vim.ui.input = require'lspactions'.input
-vim.lsp.handlers["textDocument/de***REMOVED***nition"] = require'lspactions'.de***REMOVED***nition
 
 local opts = {
     noremap = true,
