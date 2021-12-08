@@ -17,6 +17,27 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            'nvim-telescope/telescope-fzy-native.nvim',
+            'ThePrimeagen/git-worktree.nvim',
+            'nvim-lua/plenary.nvim'
+        }
+    }
+
+
+    -- LSP
+    use {
+        'neovim/nvim-lspcon***REMOVED***g',
+        requires = {
+            'williamboman/nvim-lsp-installer',
+            'mfussenegger/nvim-jdtls',
+
+        }
+    }
     use {
         'folke/trouble.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
@@ -28,32 +49,6 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
             }
         end
     }
-
-    -- Telescope
-    use {
-        'nvim-telescope/telescope-fzy-native.nvim',
-        'ThePrimeagen/git-worktree.nvim',
-
-        requires = use {
-            'nvim-telescope/telescope.nvim',
-            requires = use {'nvim-lua/plenary.nvim'}
-        }
-    }
-
-    -- Theme
-    use {
-        'gruvbox-community/gruvbox',
-        'drewtempelmeyer/palenight.vim',
-        'sainnhe/gruvbox-material'
-    }
-
-    -- LSP con***REMOVED***g
-    use {
-        'neovim/nvim-lspcon***REMOVED***g',
-        'williamboman/nvim-lsp-installer',
-        'mfussenegger/nvim-jdtls',
-    }
-
     use {
         'RishabhRD/lspactions',
         requires = {
@@ -65,41 +60,49 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
 
     -- Syntax
     use {
-        'p00f/nvim-ts-rainbow',
-        requires = {
-            'nvim-treesitter/nvim-treesitter',
-            run = ':TSUpdate'
-        }
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        requires = 'p00f/nvim-ts-rainbow',
     }
 
     -- Code Completion
     use {
-        'hrsh7th/cmp-nvim-lsp',
-        {
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/vim-vsnip',
+        requries = {
+            'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-vsnip',
-            requires = use {'hrsh7th/vim-vsnip'}
-        },
-        {
             'tzachar/cmp-tabnine',
-            run = './install.sh',
         },
-        requries = use {
-            'hrsh7th/nvim-cmp',
-        }
     }
+    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/cmp-vsnip', requires = 'hrsh7th/nvim-cmp'}
 
     -- format
     use {
         'google/vim-maktaba',
-        requires = use {
-            'google/vim-codefmt',
-            'google/vim-glaive',
-            ft = 'java'
-        }
+        'google/vim-codefmt',
+        'google/vim-glaive',
+        ft = 'java'
     }
     use {'lukas-reineke/format.nvim'}
 
-    -- UI
+    -- Other Feature
+    use {
+        'mbbill/undotree',
+        'simrat39/symbols-outline.nvim',
+        'jiangmiao/auto-pairs',
+        'svermeulen/vimpeccable',
+        'tpope/vim-fugitive'
+     }
+
+    -- Look
+    use {
+        'gruvbox-community/gruvbox',
+        'drewtempelmeyer/palenight.vim',
+        'sainnhe/gruvbox-material'
+    }
     use {
         'lewis6991/gitsigns.nvim',
         requires = {'nvim-lua/plenary.nvim'}
@@ -107,13 +110,10 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     use {
         'kyazdani42/nvim-tree.lua',
         'nvim-lualine/lualine.nvim',
-        requires = use {'kyazdani42/nvim-web-devicons'}
+        requires = 'kyazdani42/nvim-web-devicons'
     }
     use 'kosayoda/nvim-lightbulb'
 
-    -- Other
-    use {'mbbill/undotree', 'simrat39/symbols-outline.nvim', 'jiangmiao/auto-pairs', 'svermeulen/vimpeccable',
-         'tpope/vim-fugitive'}
 
     -- Automatically set up your con***REMOVED***guration after cloning packer.nvim
     -- Put this at the end after all plugins
