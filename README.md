@@ -5,3 +5,5 @@ TODO:
 1. better plugin management using Packer
     1. using Packer's con***REMOVED***g keyword
 1. explore nvim-autopair
+1. add impatient.nvim
+1. change packer window to float
