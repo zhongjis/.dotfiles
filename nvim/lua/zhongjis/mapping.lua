@@ -73,38 +73,4 @@ M.lsp_attach_mapping = function(bufnr***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>FormatCode<CR>', opts***REMOVED***
 end
 
-M.jdtls_attach_mapping = function(bufnr***REMOVED***
-    -- code actions
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua require"telescope.builtin".lsp_de***REMOVED***nitions(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>TroubleToggle lsp_references<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua require"telescope.builtin".lsp_implementations(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gs', '<cmd>lua vim.lsp.buf.signature_help(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_de***REMOVED***nition(***REMOVED***<CR>', opts***REMOVED***
-
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', "<cmd>lua require('jdtls'***REMOVED***.code_action(***REMOVED***<CR>", opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'v', '<leader>ca', "<cmd>lua require('jdtls'***REMOVED***.code_action(***REMOVED***<CR>", opts***REMOVED***
-
-    -- workspace
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wl',
-        '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders(***REMOVED******REMOVED******REMOVED***<CR>', opts***REMOVED***
-
-    -- Diagnostic
-    vim.api
-        .nvim_buf_set_keymap(bufnr, 'n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev(***REMOVED***<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next(***REMOVED***<CR>', opts***REMOVED***
-
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>b',
-        '<cmd>TroubleToggle lsp_document_diagnostics<CR>',
-        opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q',
-        '<cmd>TroubleToggle lsp_workspace_diagnostics<CR>', opts***REMOVED***
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>FormatCode<CR>', opts***REMOVED***
-end
-
 return M

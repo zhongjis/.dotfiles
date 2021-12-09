@@ -6,11 +6,6 @@ local default_on_attach = function(_, bufnr***REMOVED***
     require('zhongjis.mapping'***REMOVED***.lsp_attach_mapping(bufnr***REMOVED***
 end
 
-local jdtls_on_attach = function(_, bufnr***REMOVED***
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc'***REMOVED***
-    require('zhongjis.mapping'***REMOVED***.jdtls_attach_mapping(bufnr***REMOVED***
-end
-
 -- nvim-cmp supports additional completion capabilities
 local capabilities =require('cmp_nvim_lsp'***REMOVED***.update_capabilities(vim.lsp.protocol.make_client_capabilities(***REMOVED******REMOVED***
 
@@ -23,7 +18,6 @@ lsp_installer.on_server_ready(function(server***REMOVED***
     }
 
     if server.name == "jdtls" then
-        opts.on_attach = jdtls_on_attach
         opts.settings = {
             java = {
                 signatureHelp = {
