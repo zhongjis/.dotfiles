@@ -13,7 +13,7 @@ if fn.empty(fn.glob(install_path***REMOVED******REMOVED*** > 0 then
     _PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}***REMOVED***
 end
 
-return require('packer'***REMOVED***.startup(function(use***REMOVED***
+return require('packer'***REMOVED***.startup({function(use***REMOVED***
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -35,7 +35,6 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
         requires = {
             'williamboman/nvim-lsp-installer',
             'mfussenegger/nvim-jdtls',
-
         }
     }
     use {
@@ -120,4 +119,15 @@ return require('packer'***REMOVED***.startup(function(use***REMOVED***
     if _PACKER_BOOTSTRAP then
         require('packer'***REMOVED***.sync(***REMOVED***
     end
-end***REMOVED***
+end,
+con***REMOVED***g = {
+  display = {
+    open_fn = function(***REMOVED***
+      return require('packer.util'***REMOVED***.float({ border = 'single' }***REMOVED***
+    end
+  },
+  pro***REMOVED***le = {
+    enable = true,
+    threshold = 1 -- the amount in ms that a plugins load time must be over for it to be included in the pro***REMOVED***le
+  }
+}}***REMOVED***
