@@ -41,11 +41,7 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
         'folke/trouble.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
         con***REMOVED***g = function(***REMOVED***
-            require("trouble"***REMOVED***.setup {
-              -- your con***REMOVED***guration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the con***REMOVED***guration section below
-            }
+            require("trouble"***REMOVED***.setup{}
         end
     }
     use {
@@ -56,6 +52,7 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
             'tjdevries/astronauta.nvim',
         }
     }
+    use 'ray-x/lsp_signature.nvim'
 
     -- Syntax
     use {
