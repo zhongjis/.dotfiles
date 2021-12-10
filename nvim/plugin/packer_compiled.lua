@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
   lspactions = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/lspactions",

@@ -96,9 +96,13 @@ cmp.setup {
         }
     },
     sources = {
-        { name = 'cmp_tabnine' },
-        { name = 'vsnip' },
+        { name = 'cmp_tabnine', max_item_count = 2 },
+        { name = 'vsnip', max_item_count = 2 },
+        { name = 'nvim_lua' },
         { name = 'nvim_lsp' },
+    },
+    experimental = {
+        ghost_text = true
     }
 }
 

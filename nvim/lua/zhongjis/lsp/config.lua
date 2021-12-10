@@ -18,27 +18,26 @@ lsp_installer.on_server_ready(function(server***REMOVED***
     }
 
     if server.name == "jdtls" then
-        opts.settings = {
-            java = {
-                signatureHelp = {
-                    enabled = true
+        local available, jdtls = lsp_installer.get_server("jdtls"***REMOVED***
+        if available then
+            local default_opts = jdtls._default_options
+            opts.settings = {
+                java = {
+                    signatureHelp = {
+                        enabled = true
+                    }
                 }
             }
-        }
+            local combined_opts = vim.tbl_deep_extend("force", default_opts, opts***REMOVED***
+            require('jdtls'***REMOVED***.start_or_attach(combined_opts***REMOVED***
+        ***REMOVED***
+            print('[LSP] error, cannot ***REMOVED***nd jdtls server in nvim-lsp-installer'***REMOVED***
+        end
+    ***REMOVED***
+        -- This setup(***REMOVED*** function is exactly the same as lspcon***REMOVED***g's setup function.
+        -- Refer to https://github.com/neovim/nvim-lspcon***REMOVED***g/blob/master/doc/server_con***REMOVED***gurations.md
+        server:setup(opts***REMOVED***
     end
-    if server.name == "sumneko_lua" then
-        opts.settings = {
-            Lua = {
-                diagnostics = {
-                    globals = {'vim'}
-                }
-            }
-        }
-    end
-
-    -- This setup(***REMOVED*** function is exactly the same as lspcon***REMOVED***g's setup function.
-    -- Refer to https://github.com/neovim/nvim-lspcon***REMOVED***g/blob/master/doc/server_con***REMOVED***gurations.md
-    server:setup(opts***REMOVED***
 end***REMOVED***
 
 require"format".setup {
