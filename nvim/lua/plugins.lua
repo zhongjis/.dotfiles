@@ -17,7 +17,6 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim',
@@ -27,7 +26,6 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
             'nvim-lua/plenary.nvim'
         }
     }
-
 
     -- LSP
     use {
