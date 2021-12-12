@@ -17,25 +17,7 @@ lsp_installer.on_server_ready(function(server***REMOVED***
         capabilities = capabilities
     }
 
-    if server.name == "jdtls" then
-        local available, jdtls = lsp_installer.get_server("jdtls"***REMOVED***
-        if available then
-            local default_opts = jdtls._default_options
-            opts.settings = {
-                java = {
-                    signatureHelp = {
-                        enabled = true
-                    }
-                }
-            }
-            local combined_opts = vim.tbl_deep_extend("force", default_opts, opts***REMOVED***
-            require('jdtls'***REMOVED***.start_or_attach(combined_opts***REMOVED***
-        ***REMOVED***
-            print('[LSP] error, cannot ***REMOVED***nd jdtls server in nvim-lsp-installer'***REMOVED***
-        end
-    ***REMOVED***
-        -- This setup(***REMOVED*** function is exactly the same as lspcon***REMOVED***g's setup function.
-        -- Refer to https://github.com/neovim/nvim-lspcon***REMOVED***g/blob/master/doc/server_con***REMOVED***gurations.md
+    if server.name ~= "jdtls" then
         server:setup(opts***REMOVED***
     end
 end***REMOVED***
@@ -72,3 +54,28 @@ require"format".setup {
         target = "current"
     }}
 }
+
+local M = {}
+
+function M.setup_jdtls(***REMOVED***
+    local custom_con***REMOVED***g = {
+        on_attach = default_on_attach,
+        capabilities = capabilities,
+        settings = {
+            java = {
+                signatureHelp = {
+                    enabled = true
+                }
+            }
+        }
+    }
+    local available, jdtls = lsp_installer.get_server("jdtls"***REMOVED***
+    if available then
+        local con***REMOVED***g = vim.tbl_deep_extend("force", jdtls._default_options, custom_con***REMOVED***g***REMOVED***
+        require('jdtls'***REMOVED***.start_or_attach(con***REMOVED***g***REMOVED***
+    ***REMOVED***
+        print('[LSP] Error, jdtls server is not avilable in nvim-lsp-installer'***REMOVED***
+    end
+end
+
+return M
