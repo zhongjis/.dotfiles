@@ -23,8 +23,8 @@ local con***REMOVED***g = {
     }
   },
   update_focused_***REMOVED***le = {
-    enable      = false,
-    update_cwd  = false,
+    enable      = true,
+    update_cwd  = true,
     ignore_list = {}
   },
   system_open = {
@@ -38,10 +38,10 @@ local con***REMOVED***g = {
 ***REMOVED***= {
     enable = true,
     ignore = true,
-    timeout = 500,
+    timeout = 200,
   },
   view = {
-    width = "15%",
+    width = "125",
     height = 30,
     hide_root_folder = false,
     side = 'left',
