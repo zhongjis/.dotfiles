@@ -66,10 +66,10 @@ M.lsp_attach_mapping = function(bufnr***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next(***REMOVED***<CR>', opts***REMOVED***
 
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>b',
-        '<cmd>TroubleToggle lsp_document_diagnostics<CR>',
+        '<cmd>TroubleToggle document_diagnostics<CR>',
         opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>q',
-        '<cmd>TroubleToggle lsp_workspace_diagnostics<CR>', opts***REMOVED***
+        '<cmd>TroubleToggle workspace_diagnostics<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>FormatCode<CR>', opts***REMOVED***
 end
 

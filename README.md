@@ -6,5 +6,6 @@ TODO:
     1. using Packer's con***REMOVED***g keyword
 1. explore nvim-autopair
 1. add impatient.nvim
+1. con***REMOVED***rm vsnip works
 1. update lua-tree
     1. allow tree always show even after selection
