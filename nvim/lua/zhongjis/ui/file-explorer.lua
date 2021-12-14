@@ -1,6 +1,7 @@
 local tree_cb = require'nvim-tree.con***REMOVED***g'.nvim_tree_callback
 
 local con***REMOVED***g = {
+  -- :help nvim-tree.setup
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = true,
