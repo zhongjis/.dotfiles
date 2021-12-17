@@ -160,6 +160,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspcon***REMOVED***g"
   },
   ["nvim-tree.lua"] = {
+    con***REMOVED***g = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
@@ -258,6 +259,10 @@ _G.packer_plugins = {
 }
 
 time([[De***REMOVED***ning packer_plugins]], false***REMOVED***
+-- Con***REMOVED***g for: nvim-tree.lua
+time([[Con***REMOVED***g for nvim-tree.lua]], true***REMOVED***
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "con***REMOVED***g", "nvim-tree.lua"***REMOVED***
+time([[Con***REMOVED***g for nvim-tree.lua]], false***REMOVED***
 -- Con***REMOVED***g for: trouble.nvim
 time([[Con***REMOVED***g for trouble.nvim]], true***REMOVED***
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "con***REMOVED***g", "trouble.nvim"***REMOVED***

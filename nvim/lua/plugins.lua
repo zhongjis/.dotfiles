@@ -103,9 +103,17 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
     }
     use {
         'kyazdani42/nvim-tree.lua',
+        requires = {
+          'kyazdani42/nvim-web-devicons', -- optional, for ***REMOVED***le icon
+        },
+        con***REMOVED***g = require('zhongjis.ui.nvim-tree'***REMOVED***.setup(***REMOVED***
+    }
+
+    use {
         'nvim-lualine/lualine.nvim',
         requires = 'kyazdani42/nvim-web-devicons'
     }
+
     use 'kosayoda/nvim-lightbulb'
 
 
