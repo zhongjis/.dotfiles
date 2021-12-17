@@ -7,8 +7,10 @@ local default_on_attach = function(_, bufnr***REMOVED***
 end
 -- nvim-cmp supports additional completion capabilities
 local capabilities = require('cmp_nvim_lsp'***REMOVED***.update_capabilities(vim.lsp.protocol.make_client_capabilities(***REMOVED******REMOVED***
+local util = require('zhongjis.util'***REMOVED***
 
 function M.setup_default(***REMOVED***
+    local ignored_servers = { 'jdtls' }
     -- Enable the language servers using nvim-lsp-installer
     lsp_installer.on_server_ready(function(server***REMOVED***
         local opts = {
@@ -25,9 +27,10 @@ function M.setup_default(***REMOVED***
             }
         end
 
-        if server.name ~= "jdtls" then
+        if not util.has_value(ignored_servers, server.name***REMOVED*** then
             server:setup(opts***REMOVED***
         end
+
     end***REMOVED***
 end
 

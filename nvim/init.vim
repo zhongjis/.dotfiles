@@ -46,8 +46,8 @@ lua require("zhongjis"***REMOVED***
 
 " theme
 " colorscheme gruvbox
-" colorscheme palenight
-colorscheme gruvbox-material
+colorscheme palenight
+" colorscheme gruvbox-material
 
 " auto save
 augroup focus
