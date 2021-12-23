@@ -18,7 +18,7 @@ function M.setup_default(***REMOVED***
             capabilities = capabilities
         }
         if server.name == "sumneko_lua" then
-            local sumneko_opts = require("zhongjis.lsp.settings.sumneko_lua"***REMOVED***
+            local sumneko_opts = require('zhongjis.lsp.settings.sumneko_lua'***REMOVED***
             opts = vim.tbl_deep_extend("force", sumneko_opts, opts***REMOVED***
         end
 
@@ -44,6 +44,41 @@ function M.setup_jdtls(***REMOVED***
     ***REMOVED***
         print('[LSP] Error, jdtls server is not avilable in nvim-lsp-installer'***REMOVED***
     end
+end
+
+function M.setup_diagnositc(***REMOVED***
+  local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+  }
+
+  for _, sign in ipairs(signs***REMOVED*** do
+    vim.fn.sign_de***REMOVED***ne(sign.name, { texthl = sign.name, text = sign.text, numhl = "" }***REMOVED***
+  end
+
+  local con***REMOVED***g = {
+    -- disable virtual text
+    virtual_text = false,
+    -- show signs
+    signs = {
+      active = signs,
+    },
+    update_in_insert = true,
+    underline = true,
+    severity_sort = true,
+    float = {
+      focusable = false,
+      style = "minimal",
+      border = "rounded",
+      source = "always",
+      header = "",
+      pre***REMOVED***x = "",
+    },
+  }
+
+  vim.diagnostic.con***REMOVED***g(con***REMOVED***g***REMOVED***
 end
 
 return M
