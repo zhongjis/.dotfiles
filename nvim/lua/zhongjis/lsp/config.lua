@@ -18,13 +18,8 @@ function M.setup_default(***REMOVED***
             capabilities = capabilities
         }
         if server.name == "sumneko_lua" then
-            opts.settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = {'vim'}
-                    }
-                }
-            }
+            local sumneko_opts = require("zhongjis.lsp.settings.sumneko_lua"***REMOVED***
+            opts = vim.tbl_deep_extend("force", sumneko_opts, opts***REMOVED***
         end
 
         if not util.has_value(ignored_servers, server.name***REMOVED*** then
@@ -35,20 +30,16 @@ function M.setup_default(***REMOVED***
 end
 
 function M.setup_jdtls(***REMOVED***
-    local custom_con***REMOVED***g = {
+    local opts = {
         on_attach = default_on_attach,
         capabilities = capabilities,
-        settings = {
-            java = {
-                signatureHelp = {
-                    enabled = true
-                }
-            }
-        }
     }
+    local jdtls_opts = require('zhongjis.lsp.settings.jdtls'***REMOVED***
+    opts = vim.tbl_deep_extend("force", opts, jdtls_opts***REMOVED***
+
     local available, jdtls = lsp_installer.get_server("jdtls"***REMOVED***
     if available then
-        local con***REMOVED***g = vim.tbl_deep_extend("force", jdtls._default_options, custom_con***REMOVED***g***REMOVED***
+        local con***REMOVED***g = vim.tbl_deep_extend("force", jdtls._default_options, opts***REMOVED***
         require('jdtls'***REMOVED***.start_or_attach(con***REMOVED***g***REMOVED***
     ***REMOVED***
         print('[LSP] Error, jdtls server is not avilable in nvim-lsp-installer'***REMOVED***
