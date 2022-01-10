@@ -47,7 +47,6 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
         requires = {
             'nvim-lua/plenary.nvim',
             'nvim-lua/popup.nvim',
-            'tjdevries/astronauta.nvim',
         }
     }
     use 'ray-x/lsp_signature.nvim'
@@ -63,6 +62,7 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
     use {
         'hrsh7th/nvim-cmp',
         'hrsh7th/vim-vsnip',
+        'hrsh7th/vim-vsnip-integ',
         requries = {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-vsnip',
@@ -85,10 +85,13 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
     -- Other Feature
     use {
         'mbbill/undotree',
-        'simrat39/symbols-outline.nvim',
         'jiangmiao/auto-pairs',
         'svermeulen/vimpeccable',
         'tpope/vim-fugitive'
+     }
+
+     use {
+        'simrat39/symbols-outline.nvim'
      }
 
     -- Look
