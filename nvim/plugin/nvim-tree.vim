@@ -1,4 +1,3 @@
-let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a ***REMOVED***le
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_git_hl = 1 "0 by default, will enable ***REMOVED***le highlight for git attributes (can be used without the icons***REMOVED***.
 let g:nvim_tree_highlight_opened_***REMOVED***les = 1 "0 by default, will enable folder and ***REMOVED***le icon highlight for opened ***REMOVED***les/directories.
@@ -11,16 +10,6 @@ let g:nvim_tree_symlink_arrow = ' ➛  ' " defaults to ' ➛ '. used as a separa
 let g:nvim_tree_respect_buf_cwd = 0 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
 let g:nvim_tree_create_in_closed_folder = 1 "1 by default, When creating ***REMOVED***les, sets the path of a ***REMOVED***le when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
 let g:nvim_tree_refresh_wait = 100 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
-let g:nvim_tree_window_picker_exclude = {
-    \   '***REMOVED***letype': [
-    \     'notify',
-    \     'packer',
-    \     'qf'
-    \   ],
-    \   'buftype': [
-    \     'terminal'
-    \   ]
-    \ }
 " Dictionary of buffer option names mapped to a list of option values that
 " indicates to the window picker that the buffer's window should not be
 " selectable.

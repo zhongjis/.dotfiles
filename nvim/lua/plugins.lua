@@ -80,7 +80,7 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
         'google/vim-glaive',
         ft = 'java'
     }
-    use {'lukas-reineke/format.nvim'}
+    use {'lukas-reineke/lsp-format.nvim'}
 
     -- Other Feature
     use {

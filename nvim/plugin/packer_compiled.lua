@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["format.nvim"] = {
-    loaded = true,
-    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/format.nvim",
-    url = "https://github.com/lukas-reineke/format.nvim"
-  },
   ["git-worktree.nvim"] = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
@@ -113,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
+  },
+  ["lsp-format.nvim"] = {
+    loaded = true,
+    path = "/Users/zshen/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
+    url = "https://github.com/lukas-reineke/lsp-format.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -267,5 +267,6 @@ if should_pro***REMOVED***le then save_pro***REMOVED***les(1***REMOVED*** end
 end***REMOVED***
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"'***REMOVED***
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your con***REMOVED***g for correctness" | echohl None'***REMOVED***
 end

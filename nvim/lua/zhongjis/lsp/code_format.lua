@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup_format(***REMOVED***
-    require('format'***REMOVED***.setup {
+    require('lsp-format'***REMOVED***.setup {
         vim = {{
             cmd = {"luafmt -w replace"},
             start_pattern = "^lua << EOF$",
