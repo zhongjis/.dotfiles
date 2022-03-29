@@ -45,8 +45,8 @@ lua require('plugins'***REMOVED***
 lua require("zhongjis"***REMOVED***
 
 " theme
-" colorscheme gruvbox
-colorscheme palenight
+colorscheme gruvbox
+" colorscheme palenight
 " colorscheme gruvbox-material
 
 " auto save

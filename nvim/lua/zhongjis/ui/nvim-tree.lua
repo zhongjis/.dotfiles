@@ -74,7 +74,7 @@ local con***REMOVED***g = {
     },
     open_***REMOVED***le = {
       quit_on_open = false,
-      resize_window = false,
+      resize_window = true,
       window_picker = {
         enable = true,
         chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
@@ -86,7 +86,7 @@ local con***REMOVED***g = {
     },
   },
   view = {
-    width = 125,
+    width = 45,
     height = 30,
     hide_root_folder = false,
     preserve_window_proportions = false,
@@ -94,7 +94,7 @@ local con***REMOVED***g = {
     relativenumber = false,
     signcolumn = "yes",
     side = 'left',
-    auto_resize = true,
+    auto_resize = false,
     mappings = {
       custom_only = true,
       list = {

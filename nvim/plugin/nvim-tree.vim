@@ -4,12 +4,10 @@ let g:nvim_tree_highlight_opened_***REMOVED***les = 1 "0 by default, will enable
 let g:nvim_tree_root_folder_modi***REMOVED***er = ':~' "This is the default. See :help ***REMOVED***lename-modi***REMOVED***ers for more options
 let g:nvim_tree_add_trailing = 0 "0 by default, append a trailing slash to folder names
 let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only cntain a single folder into one node in the ***REMOVED***le tree
-let g:nvim_tree_disable_window_picker = 0 "0 by default, will disable the window picker.
 let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the ***REMOVED***lename. Use with caution, it could break rendering if you set an empty string depending on your font.
 let g:nvim_tree_symlink_arrow = ' ➛  ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
 let g:nvim_tree_respect_buf_cwd = 0 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
 let g:nvim_tree_create_in_closed_folder = 1 "1 by default, When creating ***REMOVED***les, sets the path of a ***REMOVED***le when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
-let g:nvim_tree_refresh_wait = 100 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
 " Dictionary of buffer option names mapped to a list of option values that
 " indicates to the window picker that the buffer's window should not be
 " selectable.
