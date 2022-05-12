@@ -9,24 +9,22 @@ end
 local capabilities = require('cmp_nvim_lsp'***REMOVED***.update_capabilities(vim.lsp.protocol.make_client_capabilities(***REMOVED******REMOVED***
 local util = require('zhongjis.util'***REMOVED***
 
+local lspcon***REMOVED***g = require("lspcon***REMOVED***g"***REMOVED***
+
+
 function M.setup_default(***REMOVED***
-    local ignored_servers = { 'jdtls' }
-    -- Enable the language servers using nvim-lsp-installer
-    lsp_installer.on_server_ready(function(server***REMOVED***
-        local opts = {
-            on_attach = default_on_attach,
-            capabilities = capabilities
-        }
-        if server.name == "sumneko_lua" then
-            local sumneko_opts = require('zhongjis.lsp.settings.sumneko_lua'***REMOVED***
-            opts = vim.tbl_deep_extend("force", sumneko_opts, opts***REMOVED***
-        end
+    require("nvim-lsp-installer"***REMOVED***.setup {}
+    local opts = {
+        on_attach = default_on_attach,
+        capabilities = capabilities
+    }
 
-        if not util.has_value(ignored_servers, server.name***REMOVED*** then
-            server:setup(opts***REMOVED***
-        end
+    local sumneko_opts = require('zhongjis.lsp.settings.sumneko_lua'***REMOVED***
+    local lua_opts = vim.tbl_deep_extend("force", sumneko_opts, opts***REMOVED***
 
-    end***REMOVED***
+    lspcon***REMOVED***g.sumneko_lua.setup(lua_opts***REMOVED***
+    lspcon***REMOVED***g.tsserver.setup(opts***REMOVED***
+
 end
 
 function M.setup_jdtls(***REMOVED***
