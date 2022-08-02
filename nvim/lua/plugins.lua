@@ -17,6 +17,9 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Github Copilot
+    use 'github/copilot.vim'
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim',
@@ -66,7 +69,6 @@ return require('packer'***REMOVED***.startup({function(use***REMOVED***
         requries = {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-vsnip',
-            'tzachar/cmp-tabnine',
         },
     }
     use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
