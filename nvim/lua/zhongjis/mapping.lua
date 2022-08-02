@@ -49,9 +49,9 @@ M.lsp_attach_mapping = function(bufnr***REMOVED***
 
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename(***REMOVED***<CR>', opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca',
-        "<cmd>lua require'telescope.builtin'.lsp_code_actions(require('telescope.themes'***REMOVED***.get_cursor({}***REMOVED******REMOVED***<CR>", opts***REMOVED***
+        "<cmd>lua =vim.lsp.buf.code_action(***REMOVED***<CR>", opts***REMOVED***
     vim.api.nvim_buf_set_keymap(bufnr, 'v', '<leader>ca',
-        "<cmd>lua require'telescope.builtin'.lsp_range_code_actions(require('telescope.themes'***REMOVED***.get_cursor({}***REMOVED******REMOVED***<CR>", opts***REMOVED***
+        "<cmd>lua =vim.lsp.buf.range_code_action(***REMOVED***<CR>", opts***REMOVED***
 
     -- workspace
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder(***REMOVED***<CR>', opts***REMOVED***
