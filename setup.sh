@@ -1,62 +1,62 @@
-***REMOVED***!/bin/bash
-***REMOVED*** Install OMZ
-***REMOVED*** placeholder
+#!/bin/bash
+# Install OMZ
+# placeholder
 
-***REMOVED*** Install Starship for OMZ
-***REMOVED*** placeholder
+# Install Starship for OMZ
+# placeholder
 
-***REMOVED*** ---- OMZ Plugin setup ----
+# ---- OMZ Plugin setup ----
 echo "[INFO] Installing OMZ plugins"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-***REMOVED*** ---- symlinks setup ----
-CURRENT_DIR=$(pwd***REMOVED***
-echo "[INFO] Creating dot***REMOVED***le symlinks..."
-ln -sf $CURRENT_DIR/nvim ~/.con***REMOVED***g
+# ---- symlinks setup ----
+CURRENT_DIR=$(pwd)
+echo "[INFO] Creating dotfile symlinks..."
+ln -sf $CURRENT_DIR/nvim ~/.config
 ln -sf $CURRENT_DIR/.zshrc ~
 ln -sf $CURRENT_DIR/.tmux.conf ~
 
-***REMOVED*** ---- Tmux Setup ----
-***REMOVED*** Install Tmux
+# ---- Tmux Setup ----
+# Install Tmux
 echo "[INFO] Installing Tmux"
 if brew list tmux &>/dev/null; then
 	echo "[INFO] Tmux is already installed. Update Instead"
 	brew upgrade tmux
-***REMOVED***
-	***REMOVED*** Install tmux if it's not already installed
+else
+	# Install tmux if it's not already installed
 	echo "Installing tmux..."
 	brew install tmux
-***REMOVED***
+fi
 
-***REMOVED*** Install TPM
+# Install TPM
 echo "[INFO] Installing Tmux Plugin Manager..."
 TPM_DIR="$HOME/.tmux/plugins/tpm"
 if [ -d "$TPM_DIR" ]; then
 	echo "[INFO] Directory $TPM_DIR already exists. Update instead"
 	git -C "$TPM_DIR" pull origin master
-***REMOVED***
-	***REMOVED*** If the directory does not exist, clone the repository
+else
+	# If the directory does not exist, clone the repository
 	git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
-***REMOVED***
+fi
 
-***REMOVED*** ---- NeoVim Setup ----
+# ---- NeoVim Setup ----
 echo "[INFO] Installing NeoVim..."
 if brew list neovim &>/dev/null; then
 	echo "Neovim is already installed. Updating..."
 	brew upgrade neovim
-***REMOVED***
+else
 	echo "Installing Neovim..."
 	brew install neovim
-***REMOVED***
+fi
 
-***REMOVED*** ---- Ripgrep for Neovim ----
+# ---- Ripgrep for Neovim ----
 echo "[INFO] Installing optional dependencies for Lazy.vim ripgrep fd"
 if brew list ripgrep &>/dev/null; then
 	echo "[INFO] ripgrep or fd is already installed. Update Instead"
 	brew upgrade ripgrep fd
-***REMOVED***
-	***REMOVED*** Install tmux if it's not already installed
+else
+	# Install tmux if it's not already installed
 	echo "Installing tmux..."
 	brew install ripgrep fd
-***REMOVED***
+fi

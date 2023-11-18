@@ -1,8 +1,8 @@
-***REMOVED*** Description
-A simple customized portable dot***REMOVED***les setup.
+# Description
+A simple customized portable dotfiles setup.
 
-***REMOVED*** Goal
+# Goal
 Two steps setup:
-1. clone repo `git clone git@github.com:zhongjis/dot***REMOVED***les-awesome.git`
+1. clone repo `git clone git@github.com:zhongjis/dotfiles-awesome.git`
 2. run `setup.sh`
-3. ***REMOVED***nish
+3. finish
