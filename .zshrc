@@ -100,8 +100,8 @@ else
   export EDITOR='nvim'
 fi
 
-# Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+# Compilation flags
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -121,8 +121,8 @@ alias zshrcwork="nvim ~/.zshrc-work"
 alias vimrc="nvim ~/.config/nvim/"
 alias tmuxconf="nvim ~/.tmux.conf"
 
-alias ls="exa --long --header --git"
 alias la="exa --long --header --git -a"
+alias ls="exa --long --header --git"
 alias ls2="exa --tree --level=2"
 alias grep="grep --color=auto"
 
@@ -163,4 +163,3 @@ if [[ -f $HOME/.zshrc_work ]]; then
 else
     echo "Warning: Confidential settings .zshrc_work not found."
 fi
-
