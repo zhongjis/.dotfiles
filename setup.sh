@@ -1,4 +1,11 @@
 ***REMOVED***!/bin/bash
+***REMOVED*** Install OMZ
+***REMOVED*** placeholder
+
+***REMOVED*** Install Starship for OMZ
+***REMOVED*** placeholder
+
+***REMOVED*** ---- symlinks setup ----
 CURRENT_DIR=$(pwd***REMOVED***
 echo "[INFO] Creating dot***REMOVED***le symlinks..."
 ln -sf $CURRENT_DIR/nvim ~/.con***REMOVED***g
