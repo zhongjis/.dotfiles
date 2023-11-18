@@ -5,6 +5,11 @@
 ***REMOVED*** Install Starship for OMZ
 ***REMOVED*** placeholder
 
+***REMOVED*** ---- OMZ Plugin setup ----
+echo "[INFO] Installing OMZ plugins"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 ***REMOVED*** ---- symlinks setup ----
 CURRENT_DIR=$(pwd***REMOVED***
 echo "[INFO] Creating dot***REMOVED***le symlinks..."
