@@ -1,13 +1,8 @@
-TODO:
+***REMOVED*** Description
+A simple customized portable dot***REMOVED***les setup.
 
-1. better formatter setup for languages other than Java
-1. ***REMOVED***x range code action (or ***REMOVED***gure out a better way to do it***REMOVED***
-1. better plugin management using Packer
-    1. using Packer's con***REMOVED***g keyword
-1. explore nvim-autopair
-1. add impatient.nvim
-1. con***REMOVED***rm vsnip works
-1. update lua-tree
-    1. allow tree always show even after selection
-
-1. git fugitive - git diff should show ***REMOVED***le diff of current buffer
+***REMOVED*** Goal
+Two steps setup:
+1. clone repo `git clone git@github.com:zhongjis/dot***REMOVED***les-awesome.git`
+2. run `setup.sh`
+3. ***REMOVED***nish
