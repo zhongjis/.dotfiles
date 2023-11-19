@@ -1,4 +1,15 @@
 #!/bin/bash
+# ---- Set Zsh as Default Shell (if not already set) ----
+# DEFAULT_SHELL=$(echo $SHELL)
+# ZSH_PATH=$(which zsh)
+
+# if [ "$DEFAULT_SHELL" != "$ZSH_PATH" ]; then
+#     echo "[INFO] Setting Zsh as the default shell..."
+#     chsh -s $(which zsh)
+# else
+#     echo "[INFO] Zsh is already the default shell."
+# fi
+
 # Install OMZ
 # placeholder
 
@@ -51,12 +62,23 @@ else
 fi
 
 # ---- Ripgrep for Neovim ----
-echo "[INFO] Installing optional dependencies for Lazy.vim ripgrep fd"
+echo "[INFO] Installing optional dependencies for Lazy.vim ripgrep"
 if brew list ripgrep &>/dev/null; then
-	echo "[INFO] ripgrep or fd is already installed. Update Instead"
-	brew upgrade ripgrep fd
+	echo "[INFO] ripgrep is already installed. Update Instead"
+	brew upgrade ripgrep
 else
 	# Install tmux if it's not already installed
 	echo "Installing tmux..."
-	brew install ripgrep fd
+	brew install ripgrep
+fi
+
+# ---- fd for Neovim ----
+echo "[INFO] Installing optional dependencies for Lazy.vim fd"
+if brew list fd &>/dev/null; then
+	echo "[INFO] fd is already installed. Update Instead"
+	brew upgrade fd
+else
+	# Install tmux if it's not already installed
+	echo "Installing tmux..."
+	brew install fd
 fi
