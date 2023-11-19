@@ -20,7 +20,7 @@
 echo "[INFO] Installing OMZ plugins"
 
 # Function to install or update a plugin
-install_or_update_plugin() {
+install_or_update_omz_plugin() {
     local plugin_url="$1"
     local plugin_dir_name="${2:-$(basename $plugin_url .git)}"
     local plugin_path="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$plugin_dir_name"
@@ -34,8 +34,8 @@ install_or_update_plugin() {
     fi
 }
 
-install_or_update_plugin https://github.com/zsh-users/zsh-autosuggestions
-install_or_update_plugin https://github.com/zsh-users/zsh-syntax-highlighting.git
+install_or_update_omz_plugin https://github.com/zsh-users/zsh-autosuggestions
+install_or_update_omz_plugin https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # ---- symlinks setup ----
 CURRENT_DIR=$(pwd)
