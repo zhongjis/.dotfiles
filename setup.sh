@@ -54,6 +54,9 @@ OMZ_PLUGIN_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
 install_or_update_git_repo https://github.com/zsh-users/zsh-autosuggestions "$OMZ_PLUGIN_DIR/zsh-autosuggestions"
 install_or_update_git_repo https://github.com/zsh-users/zsh-syntax-highlighting.git "$OMZ_PLUGIN_DIR/zsh-syntax-highlighting"
 
+# ---- Homebrew Setup ----
+# placeholder
+
 # ---- Tmux Setup ----
 install_or_update_brew_package tmux
 
