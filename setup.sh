@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Function to install or update a plugin
-install_or_update_omz_plugin() {
-    local plugin_url="$1"
-    local plugin_dir_name="${2:-$(basename $plugin_url .git)}"
-    local plugin_path="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$plugin_dir_name"
+# Function to install or update a GitHub repository
+install_or_update_git_repo() {
+    local repo_url="$1"
+    local clone_path="$2"
 
-    if [ -d "$plugin_path" ]; then
-        echo "[INFO] Updating $plugin_dir_name plugin..."
-        git -C "$plugin_path" pull origin master
+    if [ -d "$clone_path" ]; then
+        echo "[INFO] Updating repository at $clone_path..."
+        git -C "$clone_path" pull origin master
     else
-        echo "[INFO] Installing $plugin_dir_name plugin..."
-        git clone "$plugin_url" "$plugin_path"
+        echo "[INFO] Cloning repository from $repo_url to $clone_path..."
+        git clone "$repo_url" "$clone_path"
     fi
 }
+
 
 # Function to install or update a Homebrew package
 install_or_update_brew_package() {
@@ -47,24 +47,21 @@ install_or_update_brew_package() {
 # Install Starship Theme for OMZ
 # placeholder
 
+# ---- OMZ Plugin Setup ----
 echo "[INFO] Installing OMZ plugins"
+OMZ_PLUGIN_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
 
-install_or_update_omz_plugin https://github.com/zsh-users/zsh-autosuggestions
-install_or_update_omz_plugin https://github.com/zsh-users/zsh-syntax-highlighting.git
+install_or_update_git_repo https://github.com/zsh-users/zsh-autosuggestions "$OMZ_PLUGIN_DIR/zsh-autosuggestions"
+install_or_update_git_repo https://github.com/zsh-users/zsh-syntax-highlighting.git "$OMZ_PLUGIN_DIR/zsh-syntax-highlighting"
 
 # ---- Tmux Setup ----
 install_or_update_brew_package tmux
 
 # Install TPM
-echo "[INFO] Installing Tmux Plugin Manager..."
+echo "[INFO] Installing TPM (Tmux Plugin Manager)"
 TPM_DIR="$HOME/.tmux/plugins/tpm"
-if [ -d "$TPM_DIR" ]; then
-	echo "[INFO] Directory $TPM_DIR already exists. Update instead"
-	git -C "$TPM_DIR" pull origin master
-else
-	# If the directory does not exist, clone the repository
-	git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
-fi
+
+install_or_update_git_repo https://github.com/tmux-plugins/tpm "$TPM_DIR"
 
 # ---- NeoVim Setup ----
 install_or_update_brew_package neovim
