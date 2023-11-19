@@ -1,23 +1,4 @@
 #!/bin/bash
-# ---- Set Zsh as Default Shell (if not already set) ----
-# DEFAULT_SHELL=$(echo $SHELL)
-# ZSH_PATH=$(which zsh)
-
-# if [ "$DEFAULT_SHELL" != "$ZSH_PATH" ]; then
-#     echo "[INFO] Setting Zsh as the default shell..."
-#     chsh -s $(which zsh)
-# else
-#     echo "[INFO] Zsh is already the default shell."
-# fi
-
-# Install OMZ
-# placeholder
-
-# Install Starship for OMZ
-# placeholder
-
-# ---- OMZ Plugin setup ----
-echo "[INFO] Installing OMZ plugins"
 
 # Function to install or update a plugin
 install_or_update_omz_plugin() {
@@ -34,27 +15,45 @@ install_or_update_omz_plugin() {
     fi
 }
 
+# Function to install or update a Homebrew package
+install_or_update_brew_package() {
+    local package_name="$1"
+
+    echo "[INFO] Checking $package_name..."
+    if brew list $package_name &>/dev/null; then
+        echo "[INFO] $package_name is already installed. Updating..."
+        brew upgrade $package_name
+    else
+        echo "[INFO] Installing $package_name..."
+        brew install $package_name
+    fi
+}
+
+# ---- Set Zsh as Default Shell (if not already set) ----
+# DEFAULT_SHELL=$(echo $SHELL)
+# ZSH_PATH=$(which zsh)
+
+# if [ "$DEFAULT_SHELL" != "$ZSH_PATH" ]; then
+#     echo "[INFO] Setting Zsh as the default shell..."
+#     chsh -s $(which zsh)
+# else
+#     echo "[INFO] Zsh is already the default shell."
+# fi
+
+# ---- OMZ setup ----
+# Install OMZ
+# placeholder
+
+# Install Starship Theme for OMZ
+# placeholder
+
+echo "[INFO] Installing OMZ plugins"
+
 install_or_update_omz_plugin https://github.com/zsh-users/zsh-autosuggestions
 install_or_update_omz_plugin https://github.com/zsh-users/zsh-syntax-highlighting.git
 
-# ---- symlinks setup ----
-CURRENT_DIR=$(pwd)
-echo "[INFO] Creating dotfile symlinks..."
-ln -sf $CURRENT_DIR/nvim ~/.config
-ln -sf $CURRENT_DIR/.zshrc ~
-ln -sf $CURRENT_DIR/.tmux.conf ~
-
 # ---- Tmux Setup ----
-# Install Tmux
-echo "[INFO] Installing Tmux"
-if brew list tmux &>/dev/null; then
-	echo "[INFO] Tmux is already installed. Update Instead"
-	brew upgrade tmux
-else
-	# Install tmux if it's not already installed
-	echo "Installing tmux..."
-	brew install tmux
-fi
+install_or_update_brew_package tmux
 
 # Install TPM
 echo "[INFO] Installing Tmux Plugin Manager..."
@@ -68,33 +67,15 @@ else
 fi
 
 # ---- NeoVim Setup ----
-echo "[INFO] Installing NeoVim..."
-if brew list neovim &>/dev/null; then
-	echo "Neovim is already installed. Updating..."
-	brew upgrade neovim
-else
-	echo "Installing Neovim..."
-	brew install neovim
-fi
+install_or_update_brew_package neovim
 
-# ---- Ripgrep for Neovim ----
-echo "[INFO] Installing optional dependencies for Lazy.vim ripgrep"
-if brew list ripgrep &>/dev/null; then
-	echo "[INFO] ripgrep is already installed. Update Instead"
-	brew upgrade ripgrep
-else
-	# Install tmux if it's not already installed
-	echo "Installing tmux..."
-	brew install ripgrep
-fi
+# Optional lazy.vim dependencies
+install_or_update_brew_package ripgrep
+install_or_update_brew_package fd
 
-# ---- fd for Neovim ----
-echo "[INFO] Installing optional dependencies for Lazy.vim fd"
-if brew list fd &>/dev/null; then
-	echo "[INFO] fd is already installed. Update Instead"
-	brew upgrade fd
-else
-	# Install tmux if it's not already installed
-	echo "Installing tmux..."
-	brew install fd
-fi
+# ---- symlinks setup ----
+CURRENT_DIR=$(pwd)
+echo "[INFO] Creating dotfile symlinks..."
+ln -sf $CURRENT_DIR/nvim ~/.config
+ln -sf $CURRENT_DIR/.zshrc ~
+ln -sf $CURRENT_DIR/.tmux.conf ~
