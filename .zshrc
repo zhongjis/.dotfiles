@@ -79,13 +79,10 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-# git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
 plugins=( 
   git 
-  zsh-syntax-highlighting zsh-autosuggestions 
   autojump 
+  zsh-syntax-highlighting zsh-autosuggestions 
   sublime sublime-merge 
   vi-mode 
   docker minikube 
@@ -105,13 +102,13 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else
-  export EDITOR='nvim'
 fi
+export EDITOR='nvim'
 
 # export ARCHFLAGS="-arch x86_64"
 # Compilation flags
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
 
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
@@ -125,7 +122,8 @@ alias vim="nvim"
 
 # settings file quick access
 alias zshrc="nvim ~/.zshrc"
-alias zshrcwork="nvim ~/.zshrc-work"
+alias szshrc="source ~/.zshrc"
+alias zshrcwork="nvim ~/.zshrc_work"
 alias vimrc="nvim ~/.config/nvim/"
 alias tmuxconf="nvim ~/.tmux.conf"
 
