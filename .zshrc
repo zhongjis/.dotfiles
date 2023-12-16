@@ -5,10 +5,10 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
    # Linux specific settings
    export ZSH="/home/zshen/.oh-my-zsh"
+   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
    # macOS specific settings
    export ZSH="/Users/zshen/.oh-my-zsh"
-   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 
