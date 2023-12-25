@@ -28,53 +28,26 @@ install_or_update_brew_package() {
 	fi
 }
 
-# ---- Set Zsh as Default Shell (if not already set) ----
-# DEFAULT_SHELL=$(echo $SHELL)
-# ZSH_PATH=$(which zsh)
-
-# if [ "$DEFAULT_SHELL" != "$ZSH_PATH" ]; then
-#     echo "[INFO] Setting Zsh as the default shell..."
-#     chsh -s $(which zsh)
-# else
-#     echo "[INFO] Zsh is already the default shell."
-# fi
-
-# ---- OMZ setup ----
-# Install OMZ
-# placeholder
-
-# Install Starship Theme for OMZ
-# placeholder
-
-# ---- OMZ Plugin Setup ----
-echo "[INFO] Installing OMZ plugins"
-OMZ_PLUGIN_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
-
-install_or_update_git_repo https://github.com/zsh-users/zsh-autosuggestions "$OMZ_PLUGIN_DIR/zsh-autosuggestions"
-install_or_update_git_repo https://github.com/zsh-users/zsh-syntax-highlighting.git "$OMZ_PLUGIN_DIR/zsh-syntax-highlighting"
-
-# ---- Homebrew Setup ----
-# placeholder
-
 # ---- Tmux Setup ----
-install_or_update_brew_package tmux
+# install_or_update_brew_package tmux
 
 # Install TPM
-echo "[INFO] Installing TPM (Tmux Plugin Manager)"
-TPM_DIR="$HOME/.tmux/plugins/tpm"
+# echo "[INFO] Installing TPM (Tmux Plugin Manager)"
+# TPM_DIR="$HOME/.tmux/plugins/tpm"
 
-install_or_update_git_repo https://github.com/tmux-plugins/tpm "$TPM_DIR"
+# install_or_update_git_repo https://github.com/tmux-plugins/tpm "$TPM_DIR"
 
 # ---- NeoVim Setup ----
-install_or_update_brew_package neovim
+# install_or_update_brew_package neovim
 
 # Optional lazy.vim dependencies
-install_or_update_brew_package ripgrep
-install_or_update_brew_package fd
+# install_or_update_brew_package ripgrep
+# install_or_update_brew_package fd
 
 # ---- symlinks setup ----
 CURRENT_DIR=$(pwd)
 echo "[INFO] Creating dotfile symlinks..."
-ln -sf $CURRENT_DIR/nvim ~/.config
+ln -sf $CURRENT_DIR/.config/nvim ~/.config
+ln -sf $CURRENT_DIR/.config/alacritty ~/.config
 ln -sf $CURRENT_DIR/.zshrc ~
 ln -sf $CURRENT_DIR/.tmux.conf ~
