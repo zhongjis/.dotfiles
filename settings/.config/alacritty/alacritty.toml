@@ -1,7 +1,6 @@
 live_config_reload = true
 
 [cursor]
-style.shape = "Beam"
 style.blinking = "Always"
 
 [font]
