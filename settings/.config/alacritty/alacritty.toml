@@ -1,8 +1,8 @@
 live_config_reload = true
 
 [shell]
-program = "/bin/zsh"
-args = ["-c", "tmux attach || tmux new-session"]
+program = "/bin/bash"
+args = ["-c", "tmux attach || tmux new-session -d -s home"]
 
 [cursor]
 style.blinking = "Always"
