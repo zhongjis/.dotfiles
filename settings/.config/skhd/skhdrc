@@ -1,10 +1,3 @@
 .load "yabai-setting"
 
-alt - space : \
-    if [[ $(yabai -m query --windows | jq 'map(select(.app == "Alacritty" and ."is-floating" == true)) | length') -eq 0 ]]; then \
-        open -na Alacritty; \
-        sleep 0.1; \
-        yabai -m window --toggle float --grid 4:4:1:1:2:2; \
-    else \
-        yabai -m query --windows | jq -r 'map(select(.app == "Alacritty" and ."is-floating" == true)) | .[0].id' | xargs -I{} yabai -m window {} --close; \
-    fi
+alt - space : toggle-float-alacritty
