@@ -136,11 +136,6 @@ alias grep="grep --color=auto"
 # alias dockersethostlisten="socat TCP-LISTEN:2375,reuseaddr,fork UNIX-CONNECT:/var/run/docker.sock"
 # alias dockersethostenv="export DOCKER_HOST=http://127.0.0.1:2375"
 
-alias mvn="mvn-color" # this alias relies on mvn plugin for omz
-# mvn
-alias mvncidb="mvn clean install docker:build" # this alias relies on mvn plugin for omz
-alias mvncidbr="mvn clean install docker:build docker:run" # this alias relies on mvn plugin for omz
-
 # input file name with specific suffix will open the file in nvim or run command
 alias -s html=vi
 alias -s rb=vi
