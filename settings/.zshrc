@@ -121,11 +121,7 @@ alias vi="nvim"
 alias vim="nvim"
 
 # settings file quick access
-alias zshrc="nvim ~/.zshrc"
-alias szshrc="source ~/.zshrc"
-alias zshrcwork="nvim ~/.zshrc_work"
-alias vimrc="nvim ~/.config/nvim/"
-alias tmuxconf="nvim ~/.tmux.conf"
+alias dotfiles="nvim ~/dotfiles-awesome"
 
 alias la="exa --long --header --git -a"
 alias ls="exa --long --header --git"
