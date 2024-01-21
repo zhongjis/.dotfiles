@@ -87,6 +87,7 @@ plugins=(
   vi-mode 
   docker minikube 
   mvn 
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
