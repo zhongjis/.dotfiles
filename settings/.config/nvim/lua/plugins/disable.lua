@@ -24,6 +24,18 @@ return {
     enabled = false,
   },
   {
+    "folke/flash.nvim",
+    enabled = false,
+  },
+  {
+    "folke/tokyonight.nvim",
+    enabled = false,
+  },
+  {
+    "catppuccin/nvim",
+    enabled = false,
+  },
+  {
     "echasnovski/mini.surround",
     enabled = false,
   },
@@ -32,7 +44,7 @@ return {
     enabled = false,
   },
   {
-    "folke/flash.nvim",
+    "echasnovski/mini.ai",
     enabled = false,
   },
 }
