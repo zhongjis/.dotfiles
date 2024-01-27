@@ -28,6 +28,14 @@ return {
     enabled = false,
   },
   {
+    "folke/persistence.nvim",
+    enabled = false,
+  },
+  {
+    "nvimdev/dashboard-nvim",
+    enabled = false,
+  },
+  {
     "folke/tokyonight.nvim",
     enabled = false,
   },
