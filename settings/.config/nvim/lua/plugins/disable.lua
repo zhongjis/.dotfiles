@@ -55,4 +55,8 @@ return {
     "echasnovski/mini.ai",
     enabled = false,
   },
+  {
+    "nvim-pack/nvim-spectre",
+    enabled = false,
+  },
 }
