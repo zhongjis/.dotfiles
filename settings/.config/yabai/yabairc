@@ -49,5 +49,5 @@ yabai -m rule --add app="^Dash$" manage=off
 yabai -m rule --add app="^Okta Verify$" manage=off
 yabai -m rule --add app="^vault_token_generator_v2_mac$" manage=off
 yabai -m rule --add app="^Unclutter$" manage=off
-# yabai -m rule --add app="^Sublime Merge$" manage=off
+yabai -m rule --add app="^Sublime Merge$" manage=off
 # yabai -m rule --add app="^Things$" manage=off
