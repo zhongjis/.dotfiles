@@ -79,15 +79,16 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=( 
-  git 
-  autojump 
-  zsh-syntax-highlighting zsh-autosuggestions 
-  sublime sublime-merge 
-  vi-mode 
-  docker minikube 
-  mvn 
+plugins=(
+  git
+  autojump
+  zsh-syntax-highlighting zsh-autosuggestions
+  sublime sublime-merge
+  vi-mode
+  docker minikube
+  mvn
   kubectl
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
