@@ -1,5 +1,8 @@
 live_config_reload = true
 
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
 [shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux attach || tmux new-session -d -s home"]
@@ -17,8 +20,11 @@ style = "r"
 [window]
 decorations = "buttonless"
 dynamic_padding = false
-opacity = 0.95
+opacity = 1.00
 
 [window.padding]
 x = 18
 y = 18
+
+[env]
+TERM = "xterm-256color"
