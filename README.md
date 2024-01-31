@@ -7,7 +7,7 @@ A simple customized portable dotfiles setup.
 Two steps setup:
 
 1. clone repo `git clone git@github.com:zhongjis/dotfiles-awesome.git`
-2. run `setup.sh`
+2. run `darwin.sh`
 3. finish
 
 # Warning
