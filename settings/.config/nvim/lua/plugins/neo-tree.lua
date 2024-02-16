@@ -4,12 +4,12 @@ return {
     sources = { "filesystem", "buffers", "git_status", "document_symbols" },
     open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
     filesystem = {
-      hide_dotfiles = false,
       filtered_items = {
         hide_gitignored = true,
         hide_dotfiles = false,
         hide_by_name = {
           ".git",
+          "terraform.tfstate",
         },
       },
       bind_to_cwd = false,
