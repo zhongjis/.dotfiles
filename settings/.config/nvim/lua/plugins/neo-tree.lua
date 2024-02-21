@@ -9,7 +9,7 @@ return {
         hide_dotfiles = false,
         hide_by_name = {
           ".git",
-          "terraform.tfstate",
+          "*.tfvars",
         },
       },
       bind_to_cwd = false,
