@@ -1,3 +1,6 @@
+**my setup has been migrated to use Nix**
+https://github.com/zhongjis/nix-config
+
 # Description
 
 A simple customized portable dotfiles setup.
